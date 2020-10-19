@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/jaheel.github.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/jaheel.github.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/jaheel.github.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/jaheel.github.io/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="p8kQqdpIMH1iw-yVi96Cl-agIOP2np-N5JEmpDm93I4">
+
+<link rel="stylesheet" href="/jaheel.github.io/css/main.css">
+
+
+<link rel="stylesheet" href="/jaheel.github.io/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jaheel.github.io","root":"/jaheel.github.io/","scheme":"Mist","version":"7.7.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="学习自：C语言中文网 1 基础1.1 字符编码   字符编码 说明    ASCII 只显示英文字符（基本拉丁字母）   GB2312 简体中文字符集，1980年发布   GBK 中文字符集，在GB2312基础上扩展，1995年发布   GB18030 中文字符集，GBK的再扩展，2000年发布   Big5 繁体中文字符集，台湾、香港地区   ISO&#x2F;IEC 8859 欧洲字符集（ASCII的扩">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言笔记">
+<meta property="og:url" content="http://jaheel.github.io/blog/2020/10/19/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Alex">
+<meta property="og:description" content="学习自：C语言中文网 1 基础1.1 字符编码   字符编码 说明    ASCII 只显示英文字符（基本拉丁字母）   GB2312 简体中文字符集，1980年发布   GBK 中文字符集，在GB2312基础上扩展，1995年发布   GB18030 中文字符集，GBK的再扩展，2000年发布   Big5 繁体中文字符集，台湾、香港地区   ISO&#x2F;IEC 8859 欧洲字符集（ASCII的扩">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-19T13:28:26.473Z">
+<meta property="article:modified_time" content="2020-02-26T01:25:40.000Z">
+<meta property="article:author" content="Fons Hui">
+<meta property="article:tag" content="C">
+<meta property="article:tag" content="code">
+<meta property="article:tag" content="base">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://jaheel.github.io/blog/2020/10/19/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>C语言笔记 | Alex</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/jaheel.github.io/atom.xml" title="Alex" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/jaheel.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Alex</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Trying</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/jaheel.github.io/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/jaheel.github.io/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/jaheel.github.io/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/jaheel.github.io/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/jaheel.github.io/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/jaheel" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://jaheel.github.io/blog/2020/10/19/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/jaheel.github.io/images/G.png">
+      <meta itemprop="name" content="Fons Hui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alex">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-19 21:28:26" itemprop="dateCreated datePublished" datetime="2020-10-19T21:28:26+08:00">2020-10-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-26 09:25:40" itemprop="dateModified" datetime="2020-02-26T09:25:40+08:00">2020-02-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/jaheel.github.io/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>学习自：C语言中文网</p>
+<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1 基础"></a>1 基础</h1><h2 id="1-1-字符编码"><a href="#1-1-字符编码" class="headerlink" title="1.1 字符编码"></a>1.1 字符编码</h2><table>
+<thead>
+<tr>
+<th>字符编码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ASCII</td>
+<td>只显示英文字符（基本拉丁字母）</td>
+</tr>
+<tr>
+<td>GB2312</td>
+<td>简体中文字符集，1980年发布</td>
+</tr>
+<tr>
+<td>GBK</td>
+<td>中文字符集，在GB2312基础上扩展，1995年发布</td>
+</tr>
+<tr>
+<td>GB18030</td>
+<td>中文字符集，GBK的再扩展，2000年发布</td>
+</tr>
+<tr>
+<td>Big5</td>
+<td>繁体中文字符集，台湾、香港地区</td>
+</tr>
+<tr>
+<td>ISO/IEC 8859</td>
+<td>欧洲字符集（ASCII的扩展）</td>
+</tr>
+<tr>
+<td>Unicode</td>
+<td>统一码，万国码</td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th>Unicode方案</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>UTF-8</td>
+<td>变长编码方案，使用1~6个字节存储</td>
+</tr>
+<tr>
+<td>UTF-32</td>
+<td>固定长度编码方案，始终4个字节</td>
+</tr>
+<tr>
+<td>UTF-16</td>
+<td>使用2or4个字节存储</td>
+</tr>
+</tbody></table>
+<h2 id="1-2-编译（Compile）、链接（Link）"><a href="#1-2-编译（Compile）、链接（Link）" class="headerlink" title="1.2 编译（Compile）、链接（Link）"></a>1.2 编译（Compile）、链接（Link）</h2><p>编译器（Compiler）</p>
+<p>编译：将程序转换成计算机能够识别的二进制文件</p>
+<p>链接器（Linker）</p>
+<p>链接：将目标文件(Object File)和系统组件（比如标准库、动态链接库等）结合起来。</p>
+<h2 id="1-3-数据类型"><a href="#1-3-数据类型" class="headerlink" title="1.3 数据类型"></a>1.3 数据类型</h2><table>
+<thead>
+<tr>
+<th>说明</th>
+<th>数据类型</th>
+<th>数据长度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字符型</td>
+<td>char</td>
+<td>1</td>
+</tr>
+<tr>
+<td>短整型</td>
+<td>short</td>
+<td>2</td>
+</tr>
+<tr>
+<td>整型</td>
+<td>int</td>
+<td>4</td>
+</tr>
+<tr>
+<td>长整型</td>
+<td>long</td>
+<td>4</td>
+</tr>
+<tr>
+<td>单精度浮点型</td>
+<td>float</td>
+<td>4</td>
+</tr>
+<tr>
+<td>双精度浮点型</td>
+<td>double</td>
+<td>8</td>
+</tr>
+<tr>
+<td>无类型</td>
+<td>void</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="1-4-常用库"><a href="#1-4-常用库" class="headerlink" title="1.4 常用库"></a>1.4 常用库</h2><h3 id="1-4-1-stdio-h"><a href="#1-4-1-stdio-h" class="headerlink" title="1.4.1 stdio.h"></a>1.4.1 stdio.h</h3><p>全称：standard input and output</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">puts</span>();<span class="comment">//output string,自动换行</span></span><br><span class="line">gets();<span class="comment">//获取字符串</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>();<span class="comment">//获取输入</span></span><br><span class="line"><span class="built_in">printf</span>();<span class="comment">//print format,格式化输出，换行须在后方加'/n' </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">sizeof</span>();<span class="comment">//获取某个数据类型的长度</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">putchar</span>(a);<span class="comment">//输出单个字符</span></span><br><span class="line">getchar();<span class="comment">//获取一个字符</span></span><br><span class="line"></span><br><span class="line">fflush(<span class="built_in">stdout</span>);<span class="comment">//清空缓冲区</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-4-2-wchar-h"><a href="#1-4-2-wchar-h" class="headerlink" title="1.4.2 wchar.h"></a>1.4.2 wchar.h</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">wchar_t</span> a = <span class="string">L'A'</span>;  <span class="comment">//英文字符（基本拉丁字符）</span></span><br><span class="line"><span class="keyword">wchar_t</span> b = <span class="string">L'9'</span>;  <span class="comment">//英文数字（阿拉伯数字）</span></span><br><span class="line"><span class="keyword">wchar_t</span> c = <span class="string">L'中'</span>;  <span class="comment">//中文汉字</span></span><br><span class="line"><span class="keyword">wchar_t</span> d = <span class="string">L'国'</span>;  <span class="comment">//中文汉字</span></span><br><span class="line"><span class="keyword">wchar_t</span> e = <span class="string">L'。'</span>;  <span class="comment">//中文标点</span></span><br><span class="line"><span class="keyword">wchar_t</span> f = <span class="string">L'ヅ'</span>;  <span class="comment">//日文片假名</span></span><br><span class="line"><span class="keyword">wchar_t</span> g = <span class="string">L'♥'</span>;  <span class="comment">//特殊符号</span></span><br><span class="line"><span class="keyword">wchar_t</span> h = <span class="string">L'༄'</span>;  <span class="comment">//藏文</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-4-3-conio-h"><a href="#1-4-3-conio-h" class="headerlink" title="1.4.3 conio.h"></a>1.4.3 conio.h</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//只能用于windows平台</span></span><br><span class="line">getche();<span class="comment">//输入一个字符后立即读取，不用等待用户按下回车键，界面显示这个字符</span></span><br><span class="line">getch();<span class="comment">//立即读取输入的单个字符，不显示</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-4-4-string-h"><a href="#1-4-4-string-h" class="headerlink" title="1.4.4 string.h"></a>1.4.4 string.h</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strcat</span>(arrayName1,arrayName2);<span class="comment">//string catenate,把两个字符串拼接在一起</span></span><br><span class="line"><span class="built_in">strcpy</span>(arrayName1,arrayName2);<span class="comment">//字符串复制</span></span><br><span class="line"><span class="built_in">strcmp</span>(arrayName1,arrayName2);<span class="comment">//字符串比较</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2-指针"><a href="#2-指针" class="headerlink" title="2 指针"></a>2 指针</h1><p>&amp;：取地址</p>
+<p>*：指向地址</p>
+<p>*(&amp;a)=a</p>
+<p>&amp;(*pa)=pa</p>
+<table>
+<thead>
+<tr>
+<th>定  义</th>
+<th>含  义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int *p;</td>
+<td>p 可以指向 int 类型的数据，也可以指向类似 int arr[n] 的数组。</td>
+</tr>
+<tr>
+<td>int **p;</td>
+<td>p 为二级指针，指向 int * 类型的数据。</td>
+</tr>
+<tr>
+<td>int *p[n];</td>
+<td>p 为指针数组。[ ] 的优先级高于 *，所以应该理解为 int *(p[n]);</td>
+</tr>
+<tr>
+<td>int (*p)[n];</td>
+<td>p 为<a href="http://c.biancheng.net/c/array/" target="_blank" rel="noopener">二维数组</a>指针。</td>
+</tr>
+<tr>
+<td>int *p();</td>
+<td>p 是一个函数，它的返回值类型为 int *。</td>
+</tr>
+<tr>
+<td>int (*p)();</td>
+<td>p 是一个函数指针，指向原型为 int func() 的函数。</td>
+</tr>
+</tbody></table>
+<h1 id="3-结构体"><a href="#3-结构体" class="headerlink" title="3 结构体"></a>3 结构体</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> 结构体名&#123;</span></span><br><span class="line">    结构体所包含的变量或数组</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">enum</span> week&#123; Mon = <span class="number">1</span>, Tues = <span class="number">2</span>, Wed = <span class="number">3</span>, Thurs = <span class="number">4</span>, Fri = <span class="number">5</span>, Sat = <span class="number">6</span>, Sun = <span class="number">7</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">union</span> 共用体名&#123;</span><br><span class="line">    成员列表</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>位域：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">bs</span>&#123;</span></span><br><span class="line">    <span class="keyword">unsigned</span> m;<span class="comment">//4个字节Byte</span></span><br><span class="line">    <span class="keyword">unsigned</span> n: <span class="number">4</span>;<span class="comment">//4bit</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">char</span> ch: <span class="number">6</span>;<span class="comment">//6bit</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-知识点补充"><a href="#4-知识点补充" class="headerlink" title="4 知识点补充"></a>4 知识点补充</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> oldName newName;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> ARRAY20[<span class="number">20</span>];</span><br><span class="line">ARRAY20 a1, a2, s1, s2;<span class="comment">//等价于char a1[20], a2[20], s1[20], s2[20];</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出 max:20</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">int</span> <span class="params">(*PTR_TO_FUNC)</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a&gt;b ? a : b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    PTR_TO_FUNC pfunc = <span class="built_in">max</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"max: %d\n"</span>, (*pfunc)(<span class="number">10</span>, <span class="number">20</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>const:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MaxNum=<span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p1;<span class="comment">//指针指向的数据只读</span></span><br><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p2;<span class="comment">//同上</span></span><br><span class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p3;<span class="comment">//指针自身的值不能被修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//指针本身和它指向的数据都是只读</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p4;</span><br><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> * <span class="keyword">const</span> p5;</span><br></pre></td></tr></table></figure>
+
+<p>随机数：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));<span class="comment">//重新播种</span></span><br><span class="line">   a = rand();<span class="comment">//依据种子和正态分布产生随机数</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="5-文件操作"><a href="#5-文件操作" class="headerlink" title="5 文件操作"></a>5 文件操作</h1><p>FILE是&lt;stdio.h&gt;头文件中的一个结构体，专门保存文件信息</p>
+<h2 id="5-1-fopen"><a href="#5-1-fopen" class="headerlink" title="5.1 fopen()"></a>5.1 fopen()</h2><p>fopen()获取文件信息，包括文件名、文件状态、当前读写位置等，并将这些信息保存到一个FILE类型的结构体变量中，然后将该变量的地址返回。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp = fopen(<span class="string">"demo.txt"</span>, <span class="string">"r"</span>);<span class="comment">//只读</span></span><br><span class="line">FILE *fp = fopen(<span class="string">"D:\\demo.txt"</span>,<span class="string">"rb+"</span>);<span class="comment">//读和写</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>判断文件是否打开成功</p>
+<blockquote>
+<p>fopen()打开错误返回值是NULL</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>打开方式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>“r”</td>
+<td>以“只读”方式打开文件。只允许读取，不允许写入。文件必须存在，否则打开失败。</td>
+</tr>
+<tr>
+<td>“w”</td>
+<td>以“写入”方式打开文件。如果文件不存在，那么创建一个新文件；如果文件存在，那么清空文件内容（相当于删除原文件，再创建一个新文件）。</td>
+</tr>
+<tr>
+<td>“a”</td>
+<td>以“追加”方式打开文件。如果文件不存在，那么创建一个新文件；如果文件存在，那么将写入的数据追加到文件的末尾（文件原有的内容保留）。</td>
+</tr>
+<tr>
+<td>“r+”</td>
+<td>以“读写”方式打开文件。既可以读取也可以写入，也就是随意更新文件。文件必须存在，否则打开失败。</td>
+</tr>
+<tr>
+<td>“w+”</td>
+<td>以“写入/更新”方式打开文件，相当于<code>w</code>和<code>r+</code>叠加的效果。既可以读取也可以写入，也就是随意更新文件。如果文件不存在，那么创建一个新文件；如果文件存在，那么清空文件内容（相当于删除原文件，再创建一个新文件）。</td>
+</tr>
+<tr>
+<td>“a+”</td>
+<td>以“追加/更新”方式打开文件，相当于a和r+叠加的效果。既可以读取也可以写入，也就是随意更新文件。如果文件不存在，那么创建一个新文件；如果文件存在，那么将写入的数据追加到文件的末尾（文件原有的内容保留）。</td>
+</tr>
+</tbody></table>
+<h2 id="5-2-fclose"><a href="#5-2-fclose" class="headerlink" title="5.2 fclose()"></a>5.2 fclose()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fclose</span><span class="params">(FILE *fp)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="5-3-字符形式读写文件"><a href="#5-3-字符形式读写文件" class="headerlink" title="5.3 字符形式读写文件"></a>5.3 字符形式读写文件</h2><h3 id="fgetc"><a href="#fgetc" class="headerlink" title="fgetc()"></a>fgetc()</h3><p>file get char</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fgetc</span><span class="params">(FILE *fp)</span></span>;</span><br><span class="line"><span class="comment">//fp为文件指针，fgetc()读取成功时返回读取到的字符，读取到文件末尾或读取失败时返回EOF(end of file)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="fputc"><a href="#fputc" class="headerlink" title="fputc()"></a>fputc()</h3><p>file put char</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fputc</span> <span class="params">( <span class="keyword">int</span> ch, FILE *fp )</span></span>;</span><br><span class="line"><span class="comment">//ch为要写入的字符，fp为文件指针</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-4-字符串形式读写文件"><a href="#5-4-字符串形式读写文件" class="headerlink" title="5.4 字符串形式读写文件"></a>5.4 字符串形式读写文件</h2><h3 id="fgets"><a href="#fgets" class="headerlink" title="fgets()"></a>fgets()</h3><p>file get string</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">fgets</span><span class="params">(<span class="keyword">char</span> *str,<span class="keyword">int</span> n, FILE *fp)</span></span>;</span><br><span class="line"><span class="comment">//str为字符数组，n为要读取的字符数目，fp为文件指针</span></span><br><span class="line"><span class="comment">//遇见换行符结束读取</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="fputs"><a href="#fputs" class="headerlink" title="fputs()"></a>fputs()</h3><p>file put string</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fputs</span><span class="params">(<span class="keyword">char</span> *str, FILE *fp)</span></span>;</span><br><span class="line"><span class="comment">//str为要写入的字符串，fp为文件指针。写入成功返回非负数，失败返回EOF</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-5-数据块形式读写文件"><a href="#5-5-数据块形式读写文件" class="headerlink" title="5.5 数据块形式读写文件"></a>5.5 数据块形式读写文件</h2><p>fread()和fwrite()时应该以二进制形式打开文件</p>
+<h3 id="fread"><a href="#fread" class="headerlink" title="fread()"></a>fread()</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">fread</span><span class="params">(<span class="keyword">void</span> *ptr, <span class="keyword">size_t</span> <span class="built_in">size</span>,<span class="keyword">size_t</span> count, FILE *fp)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">ptr:内存区块的指针</span></span><br><span class="line"><span class="comment">size:表示每个数据块的字节数</span></span><br><span class="line"><span class="comment">count:表示要读写的数据块的块数</span></span><br><span class="line"><span class="comment">fp:表示文件指针</span></span><br><span class="line"><span class="comment">返回值:返回成功读写的块数，也即count</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>对于 fread() 来说，可能读到了文件末尾，可能发生了错误，可以用 ferror() 或 feof() 检测</p>
+<h3 id="fwrite"><a href="#fwrite" class="headerlink" title="fwrite()"></a>fwrite()</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">fwrite</span> <span class="params">( <span class="keyword">void</span> * ptr, <span class="keyword">size_t</span> <span class="built_in">size</span>, <span class="keyword">size_t</span> count, FILE *fp )</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>对于 fwrite() 来说，肯定发生了写入错误，可以用 ferror() 函数检测。</p>
+<h2 id="5-6-格式化读写文件"><a href="#5-6-格式化读写文件" class="headerlink" title="5.6 格式化读写文件"></a>5.6 格式化读写文件</h2><p>fscanf()和fprintf()的读写对象不是键盘和显示器，而是磁盘文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fscanf</span> <span class="params">( FILE *fp, <span class="keyword">char</span> * format, ... )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fprintf</span> <span class="params">( FILE *fp, <span class="keyword">char</span> * format, ... )</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-7-随机读写文件"><a href="#5-7-随机读写文件" class="headerlink" title="5.7 随机读写文件"></a>5.7 随机读写文件</h2><p>rewind()用来将位置指针移动到文件开头</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rewind</span><span class="params">(FILE *fp)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>fseek()用来将位置指针移动到任意位置</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">fseek</span><span class="params">(FILE *fp, <span class="keyword">long</span> offset, <span class="keyword">int</span> origin)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>fp：文件指针</li>
+<li>offset：偏移量，也就是要移动的字节数</li>
+<li>origin：起始位置</li>
+</ol>
+<h2 id="5-8-ftell"><a href="#5-8-ftell" class="headerlink" title="5.8 ftell()"></a>5.8 ftell()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">int</span> <span class="title">ftell</span><span class="params">(FILE *fp)</span></span>;</span><br><span class="line"><span class="comment">//用来获取文件内部指针（位置指针）距离文件开头的字节数</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="6-内存分区"><a href="#6-内存分区" class="headerlink" title="6 内存分区"></a>6 内存分区</h1><table>
+<thead>
+<tr>
+<th>内存分区</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>程序代码区 (code)</td>
+<td>存放函数体的二进制代码。一个C语言程序由多个函数构成，C语言程序的执行就是函数之间的相互调用。</td>
+</tr>
+<tr>
+<td>常量区 (constant)</td>
+<td>存放一般的常量、字符串常量等。这块内存只有读取权限，没有写入权限，因此它们的值在程序运行期间不能改变。</td>
+</tr>
+<tr>
+<td>全局数据区 (global data)</td>
+<td>存放全局变量、静态变量等。这块内存有读写权限，因此它们的值在程序运行期间可以任意改变。</td>
+</tr>
+<tr>
+<td>堆区 (heap)</td>
+<td>一般由程序员分配和释放，若程序员不释放，程序运行结束时由操作系统回收。<a href="http://c.biancheng.net/cpp/html/137.html" target="_blank" rel="noopener">malloc()</a>、<a href="http://c.biancheng.net/cpp/html/134.html" target="_blank" rel="noopener">calloc()</a>、<a href="http://c.biancheng.net/cpp/html/135.html" target="_blank" rel="noopener">free()</a> 等函数操作的就是这块内存，这也是本章要讲解的重点。  注意：这里所说的堆区与数据结构中的堆不是一个概念，堆区的分配方式倒是类似于链表。</td>
+</tr>
+<tr>
+<td>动态链接库</td>
+<td>用于在程序运行期间加载和卸载动态链接库。</td>
+</tr>
+<tr>
+<td>栈区 (stack)</td>
+<td>存放函数的参数值、局部变量的值等，其操作方式类似于数据结构中的栈。</td>
+</tr>
+</tbody></table>
+<h2 id="6-1-栈和堆的区别"><a href="#6-1-栈和堆的区别" class="headerlink" title="6.1 栈和堆的区别"></a>6.1 栈和堆的区别</h2><p>栈区：系统分配和释放，不受程序员控制</p>
+<p>堆区：完全由程序员掌控，自主可控</p>
+<h2 id="6-2-动态内存分配函数"><a href="#6-2-动态内存分配函数" class="headerlink" title="6.2 动态内存分配函数"></a>6.2 动态内存分配函数</h2><h3 id="malloc"><a href="#malloc" class="headerlink" title="malloc()"></a>malloc()</h3><p>原型：void* malloc(size_t size);</p>
+<p>作用：在堆区分配 size 字节的内存空间。</p>
+<p>返回值：成功返回分配的内存地址，失败则返回NULL。</p>
+<p>注意：分配内存在动态存储区（堆区），手动分配，手动释放，申请时空间可能有也可能没有，需要自行判断，由于返回的是void*，建议手动强制类型转换。</p>
+<h3 id="calloc"><a href="#calloc" class="headerlink" title="calloc()"></a>calloc()</h3><p>原型：void* calloc(size_t n, size_t size);</p>
+<p>功能：在堆区分配 n*size 字节的连续空间。</p>
+<p>返回值：成功返回分配的内存地址，失败则返回NULL。</p>
+<p>注意：calloc() 函数是对 malloc() 函数的简单封装，参数不同，使用时务必小心，第一参数是第二参数的单元个数，第二参数是单位的字节数。</p>
+<h3 id="realloc"><a href="#realloc" class="headerlink" title="realloc()"></a>realloc()</h3><p>原型：void* realloc(void *ptr, size_t size);</p>
+<p>功能：对 ptr 指向的内存重新分配 size 大小的空间，size 可比原来的大或者小，还可以不变（如果你无聊的话）。</p>
+<p>返回值：成功返回更改后的内存地址，失败则返回NULL。</p>
+<h3 id="free"><a href="#free" class="headerlink" title="free()"></a>free()</h3><p>原型：void free(void* ptr);</p>
+<p>功能：释放由 malloc()、calloc()、realloc() 申请的内存空间。</p>
+<h1 id="7-Socket"><a href="#7-Socket" class="headerlink" title="7 Socket"></a>7 Socket</h1><ol>
+<li>Windows下socket程序依赖Winsock.dll或ws2_32.dll，必须提前加载。</li>
+<li>Windows使用“文件句柄”概念，区分socket文件和普通文件；socket（）返回值为SOCKET类型（即句柄）</li>
+<li>Windows下使用recv()/send()函数发送和接收</li>
+<li>关闭socket时，Windows使用closesocket()函数</li>
+</ol>
+<h2 id="7-1-socket"><a href="#7-1-socket" class="headerlink" title="7.1 socket()"></a>7.1 socket()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">SOCKET <span class="title">socket</span><span class="params">(<span class="keyword">int</span> af, <span class="keyword">int</span> type, <span class="keyword">int</span> protocol)</span></span>;</span><br><span class="line"><span class="comment">//创建套接字</span></span><br><span class="line"><span class="comment">//SOCK_STREAM:TCP SOCK_DGRAM:UDP</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-2-bind"><a href="#7-2-bind" class="headerlink" title="7.2 bind()"></a>7.2 bind()</h2><p>服务器端：将套接字与特定的IP地址和端口绑定起来</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bind</span><span class="params">(SOCKET sock, <span class="keyword">const</span> struct sockaddr *addr, <span class="keyword">int</span> addrlen)</span></span>;  <span class="comment">//Windows</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">sock:socket文件描述符</span></span><br><span class="line"><span class="comment">addr:sockaddr结构体变量的指针</span></span><br><span class="line"><span class="comment">addrlen:addr变量的大小</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-3-connect"><a href="#7-3-connect" class="headerlink" title="7.3 connect()"></a>7.3 connect()</h2><p>客户端：用connect()函数建立连接</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">connect</span><span class="params">(SOCKET sock, <span class="keyword">const</span> struct sockaddr *serv_addr, <span class="keyword">int</span> addrlen)</span></span>;  <span class="comment">//Windows</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-4-listen"><a href="#7-4-listen" class="headerlink" title="7.4 listen()"></a>7.4 listen()</h2><p>让套接字进入被动监听状态</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">listen</span><span class="params">(SOCKET sock, <span class="keyword">int</span> backlog)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">sock:需要进入监听状态的套接字</span></span><br><span class="line"><span class="comment">backlog:请求队列的最大长度</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-5-accept"><a href="#7-5-accept" class="headerlink" title="7.5 accept()"></a>7.5 accept()</h2><p>套接字处于监听状态时，可以通过accept()函数接收客户端请求</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">SOCKET <span class="title">accept</span><span class="params">(SOCKET sock, struct sockaddr *addr, <span class="keyword">int</span> *addrlen)</span></span>;  <span class="comment">//Windows</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">sock:服务器端套接字</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="7-6-数据接收和发送"><a href="#7-6-数据接收和发送" class="headerlink" title="7.6 数据接收和发送"></a>7.6 数据接收和发送</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//发送</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">send</span><span class="params">(SOCKET sock, <span class="keyword">const</span> <span class="keyword">char</span> *buf, <span class="keyword">int</span> len, <span class="keyword">int</span> flags)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">sock:要发送数据的套接字</span></span><br><span class="line"><span class="comment">buf:要发送的数据的缓冲区地址</span></span><br><span class="line"><span class="comment">len:要发送的数据的字节数</span></span><br><span class="line"><span class="comment">flags:发送数据时的选项</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">recv</span><span class="params">(SOCKET sock, <span class="keyword">char</span> *buf, <span class="keyword">int</span> len, <span class="keyword">int</span> flags)</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/atom.xml">
+                <span class="icon">
+                  <i class="fa fa-rss"></i>
+                </span>
+
+                <span class="label">RSS</span>
+              </a>
+            </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/jaheel.github.io/tags/C/" rel="tag"># C</a>
+              <a href="/jaheel.github.io/tags/code/" rel="tag"># code</a>
+              <a href="/jaheel.github.io/tags/base/" rel="tag"># base</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/jaheel.github.io/2020/10/19/Csharp%20Structure/" rel="prev" title="Csharp Structure">
+      <i class="fa fa-chevron-left"></i> Csharp Structure
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/jaheel.github.io/2020/10/19/git-command-learning/" rel="next" title="git command">
+      git command <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-基础"><span class="nav-number">1.</span> <span class="nav-text">1 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-字符编码"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 字符编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-编译（Compile）、链接（Link）"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 编译（Compile）、链接（Link）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-数据类型"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-常用库"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 常用库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-stdio-h"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 stdio.h</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-wchar-h"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 wchar.h</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-3-conio-h"><span class="nav-number">1.4.3.</span> <span class="nav-text">1.4.3 conio.h</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-4-string-h"><span class="nav-number">1.4.4.</span> <span class="nav-text">1.4.4 string.h</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-指针"><span class="nav-number">2.</span> <span class="nav-text">2 指针</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-结构体"><span class="nav-number">3.</span> <span class="nav-text">3 结构体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-知识点补充"><span class="nav-number">4.</span> <span class="nav-text">4 知识点补充</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-文件操作"><span class="nav-number">5.</span> <span class="nav-text">5 文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-fopen"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 fopen()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-fclose"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 fclose()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-字符形式读写文件"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 字符形式读写文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fgetc"><span class="nav-number">5.3.1.</span> <span class="nav-text">fgetc()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fputc"><span class="nav-number">5.3.2.</span> <span class="nav-text">fputc()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-字符串形式读写文件"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 字符串形式读写文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fgets"><span class="nav-number">5.4.1.</span> <span class="nav-text">fgets()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fputs"><span class="nav-number">5.4.2.</span> <span class="nav-text">fputs()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-数据块形式读写文件"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 数据块形式读写文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fread"><span class="nav-number">5.5.1.</span> <span class="nav-text">fread()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fwrite"><span class="nav-number">5.5.2.</span> <span class="nav-text">fwrite()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-格式化读写文件"><span class="nav-number">5.6.</span> <span class="nav-text">5.6 格式化读写文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-随机读写文件"><span class="nav-number">5.7.</span> <span class="nav-text">5.7 随机读写文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-8-ftell"><span class="nav-number">5.8.</span> <span class="nav-text">5.8 ftell()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-内存分区"><span class="nav-number">6.</span> <span class="nav-text">6 内存分区</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-栈和堆的区别"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 栈和堆的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-动态内存分配函数"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 动态内存分配函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#malloc"><span class="nav-number">6.2.1.</span> <span class="nav-text">malloc()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#calloc"><span class="nav-number">6.2.2.</span> <span class="nav-text">calloc()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#realloc"><span class="nav-number">6.2.3.</span> <span class="nav-text">realloc()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#free"><span class="nav-number">6.2.4.</span> <span class="nav-text">free()</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-Socket"><span class="nav-number">7.</span> <span class="nav-text">7 Socket</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-socket"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 socket()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-bind"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 bind()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-3-connect"><span class="nav-number">7.3.</span> <span class="nav-text">7.3 connect()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-listen"><span class="nav-number">7.4.</span> <span class="nav-text">7.4 listen()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-5-accept"><span class="nav-number">7.5.</span> <span class="nav-text">7.5 accept()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-6-数据接收和发送"><span class="nav-number">7.6.</span> <span class="nav-text">7.6 数据接收和发送</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Fons Hui"
+      src="/jaheel.github.io/images/G.png">
+  <p class="site-author-name" itemprop="name">Fons Hui</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/jaheel.github.io/archives/">
+        
+          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/jaheel.github.io/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/jaheel.github.io/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/jaheel.github.io/rss2.xml" title="rss → rss2.xml"><i class="fa fa-fw fa-rss"></i>rss</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:xufanxin@sina.cn" title="E-Mail → mailto:xufanxin@sina.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fons Hui</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.7.1
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/jaheel.github.io/lib/anime.min.js"></script>
+  <script src="/jaheel.github.io/lib/velocity/velocity.min.js"></script>
+  <script src="/jaheel.github.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/jaheel.github.io/js/utils.js"></script>
+
+<script src="/jaheel.github.io/js/motion.js"></script>
+
+
+<script src="/jaheel.github.io/js/schemes/muse.js"></script>
+
+
+<script src="/jaheel.github.io/js/next-boot.js"></script>
+
+
+  <script defer src="/jaheel.github.io/lib/three/three.min.js"></script>
+    <script defer src="/jaheel.github.io/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/jaheel.github.io/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
