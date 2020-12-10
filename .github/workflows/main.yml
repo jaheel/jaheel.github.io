@@ -44,7 +44,9 @@ jobs:
 
 
     - name: Execute gulp task
-      run: gulp
+      run: |
+        npm install gulp
+        gulp
 
 
     - name: Deploy hexo blog
