@@ -47,7 +47,7 @@ jobs:
 
     - name: Generate files
       run: |
-        mv ./_config.theme.yml ./themes/next @ 620b1e8/_config.yml
+        mv ./_config.theme.yml ./themes/next/_config.yml
         hexo generate
 
 
