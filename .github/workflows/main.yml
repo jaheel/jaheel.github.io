@@ -44,11 +44,12 @@ jobs:
       run: |
         npm install hexo-cli -g
         npm install
-        cd /themes/next
+        cd /themes/next @ 620b1e8
         npm install
 
     - name: Generate files
       run: |
+        mv ./_config.theme.yml ./themes/next @ 620b1e8/_config.yml
         hexo generate
 
 
