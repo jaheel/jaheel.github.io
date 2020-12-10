@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Sitemap: https://jaheel.github.io/blog/sitemap.xml
