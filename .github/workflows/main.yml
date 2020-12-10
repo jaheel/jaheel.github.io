@@ -43,11 +43,6 @@ jobs:
         hexo generate
 
 
-    - name: Execute gulp task
-      run: |
-        npm install gulp
-        gulp
-
 
     - name: Deploy hexo blog
       env:
