@@ -347,13 +347,6 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/Python/</loc>
-    <lastmod>2020-12-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://jaheel.github.io/blog/tags/Rider/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
@@ -362,6 +355,13 @@
   
   <url>
     <loc>http://jaheel.github.io/blog/tags/UML/</loc>
+    <lastmod>2020-12-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://jaheel.github.io/blog/tags/Python/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -396,13 +396,6 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/VS-Code/</loc>
-    <lastmod>2020-12-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://jaheel.github.io/blog/tags/babun/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
@@ -410,7 +403,7 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/bash/</loc>
+    <loc>http://jaheel.github.io/blog/tags/VS-Code/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -418,6 +411,13 @@
   
   <url>
     <loc>http://jaheel.github.io/blog/tags/git/</loc>
+    <lastmod>2020-12-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://jaheel.github.io/blog/tags/bash/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -494,6 +494,13 @@
   </url>
   
   <url>
+    <loc>http://jaheel.github.io/blog/tags/Search/</loc>
+    <lastmod>2020-12-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://jaheel.github.io/blog/tags/C/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
@@ -522,20 +529,6 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/Search/</loc>
-    <lastmod>2020-12-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://jaheel.github.io/blog/tags/Linked-List/</loc>
-    <lastmod>2020-12-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://jaheel.github.io/blog/tags/data-structrue/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
@@ -544,6 +537,13 @@
   
   <url>
     <loc>http://jaheel.github.io/blog/tags/Matrix/</loc>
+    <lastmod>2020-12-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://jaheel.github.io/blog/tags/Linked-List/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -587,14 +587,14 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/categories/Python/</loc>
+    <loc>http://jaheel.github.io/blog/categories/Rider/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/categories/Rider/</loc>
+    <loc>http://jaheel.github.io/blog/categories/Python/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -608,14 +608,14 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/categories/VS-Code/</loc>
+    <loc>http://jaheel.github.io/blog/categories/babun/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/categories/babun/</loc>
+    <loc>http://jaheel.github.io/blog/categories/VS-Code/</loc>
     <lastmod>2020-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
