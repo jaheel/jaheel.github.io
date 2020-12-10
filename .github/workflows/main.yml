@@ -8,36 +8,53 @@ on:
       
       - hexo-blog-backup
 
+env:
+  TZ: Asia/Shanghai
+
 # 任务
 jobs:
-  build:
+  blog-cicd:
+    name: Hexo blog build & deploy
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v2
-        with:
-          ref: hexo-blog-backup
+    - name: Checkout codes
+      uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node_version }}
-          
-      - name: Setup hexo
-        env:
-          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.email "xufanxin86@gmail.com"
-          git config --global user.name "jaheel"
-          npm install hexo-cli -g
-          npm install
-      - name: Hexo deploy
-        run: |
-          hexo clean
-          hexo g
-          hexo d
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        
+    - name: Install hexo dependencies
+      run: |
+        npm install hexo-cli gulp -g
+        npm install
+
+    - name: Generate files
+      run: |
+        hexo clean
+        hexo generate
+
+
+    - name: Execute gulp task
+      run: gulp
+
+
+    - name: Deploy hexo blog
+      env:
+        GITHUB_REPO: github.com/jaheel/jaheel.github.io
+
+      run: |
+        cd ./public && git init && git add .
+        git config user.name "jaheel"
+        git config user.email "xufanxin86@gmail.com"
+        git add .
+        git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+        git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:master
