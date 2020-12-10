@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 5.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/jaheel.github.io/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/jaheel.github.io/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/jaheel.github.io/images/favicon-16x16-next.png">
@@ -241,20 +241,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1-基础"><a href="#1-基础" class="headerlink" title="1 基础"></a>1 基础</h2><h3 id="1-1-登陆网页"><a href="#1-1-登陆网页" class="headerlink" title="1.1 登陆网页"></a>1.1 登陆网页</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</span><br><span class="line">url=<span class="string">"xxxxxx"</span></span><br><span class="line">html = urlopen(url).read().decode(<span class="string">'utf-8'</span>)<span class="comment">#decode()转换文字编码</span></span><br><span class="line"><span class="comment">#html即是往往也所有信息</span></span><br></pre></td></tr></table></figure>
+          <h2 id="1-基础"><a href="#1-基础" class="headerlink" title="1 基础"></a>1 基础</h2><h3 id="1-1-登陆网页"><a href="#1-1-登陆网页" class="headerlink" title="1.1 登陆网页"></a>1.1 登陆网页</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</span><br><span class="line">url=<span class="string">&quot;xxxxxx&quot;</span></span><br><span class="line">html = urlopen(url).read().decode(<span class="string">&#x27;utf-8&#x27;</span>)<span class="comment">#decode()转换文字编码</span></span><br><span class="line"><span class="comment">#html即是往往也所有信息</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="1-2-匹配网页内容"><a href="#1-2-匹配网页内容" class="headerlink" title="1.2 匹配网页内容"></a>1.2 匹配网页内容</h3><p>假设找网页的title:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re <span class="comment">#正则表达式模块</span></span><br><span class="line">result=re.findall(<span class="string">r"&lt;title&gt;(.+?)&lt;/title&gt;"</span>,html)</span><br><span class="line">print(<span class="string">"\nPage title is:"</span>,result[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re <span class="comment">#正则表达式模块</span></span><br><span class="line">result=re.findall(<span class="string">r&quot;&lt;title&gt;(.+?)&lt;/title&gt;&quot;</span>,html)</span><br><span class="line">print(<span class="string">&quot;\nPage title is:&quot;</span>,result[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 
 <p>找<p>:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res =re.findall(<span class="string">r"&lt;p&gt;(.+?)&lt;/p&gt;"</span>,html,flags=re.DOTALL)<span class="comment"># flags设置对tab等不敏感</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res =re.findall(<span class="string">r&quot;&lt;p&gt;(.+?)&lt;/p&gt;&quot;</span>,html,flags=re.DOTALL)<span class="comment"># flags设置对tab等不敏感</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="2-BeautifulSoup"><a href="#2-BeautifulSoup" class="headerlink" title="2 BeautifulSoup"></a>2 BeautifulSoup</h2><h3 id="2-1-用处"><a href="#2-1-用处" class="headerlink" title="2.1 用处"></a>2.1 用处</h3><p>BeautifulSoup包简化匹配方式，方便查询</p>
 <h3 id="2-2-下载"><a href="#2-2-下载" class="headerlink" title="2.2 下载"></a>2.2 下载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install beautifulsoup4</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-3-使用"><a href="#2-3-使用" class="headerlink" title="2.3 使用"></a>2.3 使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, features=<span class="string">'lxml'</span>) <span class="comment"># html是上文读取的内容</span></span><br><span class="line">print(soup.h1)</span><br><span class="line">print(<span class="string">'\n'</span>,soup.p)<span class="comment">#读取特定tag内容</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-3-使用"><a href="#2-3-使用" class="headerlink" title="2.3 使用"></a>2.3 使用</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(html, features=<span class="string">&#x27;lxml&#x27;</span>) <span class="comment"># html是上文读取的内容</span></span><br><span class="line">print(soup.h1)</span><br><span class="line">print(<span class="string">&#x27;\n&#x27;</span>,soup.p)<span class="comment">#读取特定tag内容</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="2-4-官方文档"><a href="#2-4-官方文档" class="headerlink" title="2.4 官方文档"></a>2.4 官方文档</h3><p><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="noopener">https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/</a></p>
+<h3 id="2-4-官方文档"><a href="#2-4-官方文档" class="headerlink" title="2.4 官方文档"></a>2.4 官方文档</h3><p><a target="_blank" rel="noopener" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/">https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/</a></p>
 <h3 id="2-5-解析器"><a href="#2-5-解析器" class="headerlink" title="2.5  解析器"></a>2.5  解析器</h3><table>
 <thead>
 <tr>
@@ -284,7 +284,7 @@
 <td>最好的容错性、以浏览器的方式解析文档、生成HTML5格式的文档</td>
 </tr>
 </tbody></table>
-<h2 id="3-Requests库"><a href="#3-Requests库" class="headerlink" title="3 Requests库"></a>3 Requests库</h2><h2 id="4-Asyncio库"><a href="#4-Asyncio库" class="headerlink" title="4 Asyncio库"></a>4 Asyncio库</h2><h2 id="5-aiohttp库"><a href="#5-aiohttp库" class="headerlink" title="5 aiohttp库"></a>5 aiohttp库</h2><h2 id="6-学习网址"><a href="#6-学习网址" class="headerlink" title="6 学习网址"></a>6 学习网址</h2><p><a href="https://morvanzhou.github.io/tutorials/data-manipulation/scraping/3-01-requests/" target="_blank" rel="noopener">https://morvanzhou.github.io/tutorials/data-manipulation/scraping/3-01-requests/</a></p>
+<h2 id="3-Requests库"><a href="#3-Requests库" class="headerlink" title="3 Requests库"></a>3 Requests库</h2><h2 id="4-Asyncio库"><a href="#4-Asyncio库" class="headerlink" title="4 Asyncio库"></a>4 Asyncio库</h2><h2 id="5-aiohttp库"><a href="#5-aiohttp库" class="headerlink" title="5 aiohttp库"></a>5 aiohttp库</h2><h2 id="6-学习网址"><a href="#6-学习网址" class="headerlink" title="6 学习网址"></a>6 学习网址</h2><p><a target="_blank" rel="noopener" href="https://morvanzhou.github.io/tutorials/data-manipulation/scraping/3-01-requests/">https://morvanzhou.github.io/tutorials/data-manipulation/scraping/3-01-requests/</a></p>
 
       
     </div>
@@ -362,10 +362,10 @@
       
           <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>插件：</p>
 <p>​        PlantUML4idea.zip </p>
-<p>​        来源网站：<a href="https://plugins.jetbrains.com/plugin/7017-plantuml-integration/versions" target="_blank" rel="noopener">https://plugins.jetbrains.com/plugin/7017-plantuml-integration/versions</a></p>
+<p>​        来源网站：<a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/7017-plantuml-integration/versions">https://plugins.jetbrains.com/plugin/7017-plantuml-integration/versions</a></p>
 <p>图形编辑：</p>
 <p>​        graphviz-2.38.msi(2.38为win10下稳定版)</p>
-<p>​        来源网站：<a href="https://graphviz.gitlab.io/download/" target="_blank" rel="noopener">https://graphviz.gitlab.io/download/</a></p>
+<p>​        来源网站：<a target="_blank" rel="noopener" href="https://graphviz.gitlab.io/download/">https://graphviz.gitlab.io/download/</a></p>
 <h1 id="嵌入Rider"><a href="#嵌入Rider" class="headerlink" title="嵌入Rider"></a>嵌入Rider</h1><ol>
 <li>将graphviz-2.38.msi解压到指定文件夹，系统属性 <strong>环境变量 Path</strong>添加：</li>
 </ol>
@@ -662,7 +662,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/jaheel.github.io/2020/10/19/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">OpenCV学习笔记</a>
+            <a href="/jaheel.github.io/2020/10/19/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Untitled</a>
         </h1>
 
         <div class="post-meta">
@@ -699,7 +699,7 @@
 
 
 
-<h2 id="1-1-测试"><a href="#1-1-测试" class="headerlink" title="1.1 测试"></a>1.1 测试</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"> </span><br><span class="line">image = cv2.imread(<span class="string">"1.jpg"</span>, <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">"image"</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)//使画面停留，避免闪退</span><br></pre></td></tr></table></figure>
+<h2 id="1-1-测试"><a href="#1-1-测试" class="headerlink" title="1.1 测试"></a>1.1 测试</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"> </span><br><span class="line">image = cv2.imread(<span class="string">&quot;1.jpg&quot;</span>, <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">&quot;image&quot;</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)//使画面停留，避免闪退</span><br></pre></td></tr></table></figure>
 
 
 
@@ -1157,7 +1157,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Fons Hui</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.2.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.7.1
