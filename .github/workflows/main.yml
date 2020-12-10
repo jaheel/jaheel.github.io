@@ -53,11 +53,14 @@ jobs:
 
 
     - name: Deploy hexo blog
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-          personal_token: ${{ secrets.ACCESS_TOKEN }}
-          external_repository: ${{ secrets.GH_REF }}
-          publish_branch: master
-          publish_dir: ./public
-          full_commit_message: GitHub Actions Auto Builder
-          disable_nojekyll: true
+      env:
+        ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        git config --global user.email "xufanxin86@gmail.com"
+        git config --global user.name "jaheel"
+        hexo d
+        
