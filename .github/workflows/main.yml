@@ -46,4 +46,6 @@ jobs:
 
     - name: Deploy hexo blog
       run: |
+        git config user.name "jaheel"
+        git config user.email "xufanxin86@gmail.com"
         hexo d
