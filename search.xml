@@ -1035,6 +1035,288 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Code 快捷键</title>
+    <url>/jaheel.github.io/2020/10/19/VS%20Code%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h2 id="快捷键组合方式"><a href="#快捷键组合方式" class="headerlink" title="快捷键组合方式"></a>快捷键组合方式</h2><ol>
+<li>Ctrl + Shift + ?</li>
+<li>Ctrl+C Ctrl+V</li>
+<li>Ctrl+Click </li>
+</ol>
+<h2 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+Shift+P</td>
+<td>展示全局命令面板</td>
+</tr>
+<tr>
+<td>Ctrl+P</td>
+<td>快速打开最近打开的文件</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+N</td>
+<td>打开新的编辑器窗口</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+W</td>
+<td>关闭编辑器</td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+<h2 id="基础编辑"><a href="#基础编辑" class="headerlink" title="基础编辑"></a>基础编辑</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+X</td>
+<td>剪切</td>
+</tr>
+<tr>
+<td>Ctrl+C</td>
+<td>复制</td>
+</tr>
+<tr>
+<td>Alt+up/down</td>
+<td>移动行上下</td>
+</tr>
+<tr>
+<td>Shift+Alt + up/down</td>
+<td>在当前行上下复制当前行</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + K</td>
+<td>删除行</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>在当前行下插入新的一行</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Enter</td>
+<td>在当前行上插入新的一行</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + |</td>
+<td>匹配花括号的闭合处，跳转</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>光标跳转到行头</td>
+</tr>
+<tr>
+<td>End</td>
+<td>光标跳转到行尾</td>
+</tr>
+<tr>
+<td>Ctrl + Home</td>
+<td>跳转到页头</td>
+</tr>
+<tr>
+<td>Ctrl + End</td>
+<td>跳转到页尾</td>
+</tr>
+<tr>
+<td>Ctrl + up/down</td>
+<td>行视图上下偏移</td>
+</tr>
+<tr>
+<td>Alt + PgUp/PgDown</td>
+<td>屏视图上下偏移</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + [</td>
+<td>折叠区域代码</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + ]</td>
+<td>展开区域代码</td>
+</tr>
+<tr>
+<td>Ctrl + K + C</td>
+<td>添加行注释</td>
+</tr>
+<tr>
+<td>Ctrl + K + U</td>
+<td>删除行注释</td>
+</tr>
+<tr>
+<td>Ctrl + /</td>
+<td>添加关闭行注释</td>
+</tr>
+<tr>
+<td>Shift + Alt + A</td>
+<td>块区域注释</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + T</td>
+<td>列出所有符号</td>
+</tr>
+<tr>
+<td>Ctrl + G</td>
+<td>跳转行</td>
+</tr>
+<tr>
+<td>Ctrl + P</td>
+<td>跳转文件</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + O</td>
+<td>跳转到符号处</td>
+</tr>
+<tr>
+<td>F8</td>
+<td>跳转到下一个错误或者警告</td>
+</tr>
+<tr>
+<td>Shift + F8</td>
+<td>跳转到上一个错误或者警告</td>
+</tr>
+<tr>
+<td>Ctrl + Shift +Tab</td>
+<td>切换到最近打开的文件</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + M</td>
+<td>打开问题展示面板</td>
+</tr>
+<tr>
+<td>Alt + left/right</td>
+<td>向后、向前</td>
+</tr>
+<tr>
+<td>Ctrl + M</td>
+<td>进入用Tab来移动焦点</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="查询与替换"><a href="#查询与替换" class="headerlink" title="查询与替换"></a>查询与替换</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + F</td>
+<td>查询</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>替换</td>
+</tr>
+<tr>
+<td>F3 / Shift + F3</td>
+<td>查询下一个/上一个</td>
+</tr>
+<tr>
+<td>Alt + Enter</td>
+<td>选中所有出现在查询中的</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="语言操作"><a href="#语言操作" class="headerlink" title="语言操作"></a>语言操作</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F12</td>
+<td>跳转到定义处</td>
+</tr>
+<tr>
+<td>Alt + F12</td>
+<td>代码片段显示定义</td>
+</tr>
+<tr>
+<td>Shift + F12</td>
+<td>显示所有引用</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>重命名符号</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + N</td>
+<td>新建文件</td>
+</tr>
+<tr>
+<td>Ctrl + O</td>
+<td>打开文件</td>
+</tr>
+<tr>
+<td>Ctrl + S</td>
+<td>保存文件</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + S</td>
+<td>另存为</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>VS Code</category>
+      </categories>
+      <tags>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TCP/IP学习笔记</title>
     <url>/jaheel.github.io/2020/10/19/TCP_IP/</url>
     <content><![CDATA[<p>学习自C语言中文网</p>
@@ -1476,288 +1758,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VS Code 快捷键</title>
-    <url>/jaheel.github.io/2020/10/19/VS%20Code%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h2 id="快捷键组合方式"><a href="#快捷键组合方式" class="headerlink" title="快捷键组合方式"></a>快捷键组合方式</h2><ol>
-<li>Ctrl + Shift + ?</li>
-<li>Ctrl+C Ctrl+V</li>
-<li>Ctrl+Click </li>
-</ol>
-<h2 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl+Shift+P</td>
-<td>展示全局命令面板</td>
-</tr>
-<tr>
-<td>Ctrl+P</td>
-<td>快速打开最近打开的文件</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+N</td>
-<td>打开新的编辑器窗口</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+W</td>
-<td>关闭编辑器</td>
-</tr>
-</tbody></table>
-<a id="more"></a>
-
-<h2 id="基础编辑"><a href="#基础编辑" class="headerlink" title="基础编辑"></a>基础编辑</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl+X</td>
-<td>剪切</td>
-</tr>
-<tr>
-<td>Ctrl+C</td>
-<td>复制</td>
-</tr>
-<tr>
-<td>Alt+up/down</td>
-<td>移动行上下</td>
-</tr>
-<tr>
-<td>Shift+Alt + up/down</td>
-<td>在当前行上下复制当前行</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + K</td>
-<td>删除行</td>
-</tr>
-<tr>
-<td>Ctrl + Enter</td>
-<td>在当前行下插入新的一行</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + Enter</td>
-<td>在当前行上插入新的一行</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + |</td>
-<td>匹配花括号的闭合处，跳转</td>
-</tr>
-<tr>
-<td>Home</td>
-<td>光标跳转到行头</td>
-</tr>
-<tr>
-<td>End</td>
-<td>光标跳转到行尾</td>
-</tr>
-<tr>
-<td>Ctrl + Home</td>
-<td>跳转到页头</td>
-</tr>
-<tr>
-<td>Ctrl + End</td>
-<td>跳转到页尾</td>
-</tr>
-<tr>
-<td>Ctrl + up/down</td>
-<td>行视图上下偏移</td>
-</tr>
-<tr>
-<td>Alt + PgUp/PgDown</td>
-<td>屏视图上下偏移</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + [</td>
-<td>折叠区域代码</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + ]</td>
-<td>展开区域代码</td>
-</tr>
-<tr>
-<td>Ctrl + K + C</td>
-<td>添加行注释</td>
-</tr>
-<tr>
-<td>Ctrl + K + U</td>
-<td>删除行注释</td>
-</tr>
-<tr>
-<td>Ctrl + /</td>
-<td>添加关闭行注释</td>
-</tr>
-<tr>
-<td>Shift + Alt + A</td>
-<td>块区域注释</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl + T</td>
-<td>列出所有符号</td>
-</tr>
-<tr>
-<td>Ctrl + G</td>
-<td>跳转行</td>
-</tr>
-<tr>
-<td>Ctrl + P</td>
-<td>跳转文件</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + O</td>
-<td>跳转到符号处</td>
-</tr>
-<tr>
-<td>F8</td>
-<td>跳转到下一个错误或者警告</td>
-</tr>
-<tr>
-<td>Shift + F8</td>
-<td>跳转到上一个错误或者警告</td>
-</tr>
-<tr>
-<td>Ctrl + Shift +Tab</td>
-<td>切换到最近打开的文件</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + M</td>
-<td>打开问题展示面板</td>
-</tr>
-<tr>
-<td>Alt + left/right</td>
-<td>向后、向前</td>
-</tr>
-<tr>
-<td>Ctrl + M</td>
-<td>进入用Tab来移动焦点</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="查询与替换"><a href="#查询与替换" class="headerlink" title="查询与替换"></a>查询与替换</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl + F</td>
-<td>查询</td>
-</tr>
-<tr>
-<td>Ctrl + H</td>
-<td>替换</td>
-</tr>
-<tr>
-<td>F3 / Shift + F3</td>
-<td>查询下一个/上一个</td>
-</tr>
-<tr>
-<td>Alt + Enter</td>
-<td>选中所有出现在查询中的</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="语言操作"><a href="#语言操作" class="headerlink" title="语言操作"></a>语言操作</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>F12</td>
-<td>跳转到定义处</td>
-</tr>
-<tr>
-<td>Alt + F12</td>
-<td>代码片段显示定义</td>
-</tr>
-<tr>
-<td>Shift + F12</td>
-<td>显示所有引用</td>
-</tr>
-<tr>
-<td>F2</td>
-<td>重命名符号</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl + N</td>
-<td>新建文件</td>
-</tr>
-<tr>
-<td>Ctrl + O</td>
-<td>打开文件</td>
-</tr>
-<tr>
-<td>Ctrl + S</td>
-<td>保存文件</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + S</td>
-<td>另存为</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>VS Code</category>
-      </categories>
-      <tags>
-        <tag>VS Code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>babun issues</title>
     <url>/jaheel.github.io/2020/02/10/babun-issues/</url>
     <content><![CDATA[<h2 id="1-download"><a href="#1-download" class="headerlink" title="1 download"></a>1 download</h2><p>网址：<a href="http://babun.github.io/">http://babun.github.io/</a></p>
@@ -1858,32 +1858,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo-op</title>
-    <url>/jaheel.github.io/2020/10/19/hexo-op/</url>
-    <content><![CDATA[<h1 id="hexo-op"><a href="#hexo-op" class="headerlink" title="hexo op"></a>hexo op</h1><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<a id="more"></a>
-
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>babun</category>
-      </categories>
-      <tags>
-        <tag>bash</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>babun常用命令</title>
     <url>/jaheel.github.io/2020/10/19/babun%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pact install # 安装软件包</span><br><span class="line">pact remove # 删除指定的软件包</span><br><span class="line">pact update # 更新指定的软件包</span><br><span class="line">pact show # 显示已安装的软件包</span><br><span class="line">pact find # 搜索软件包</span><br></pre></td></tr></table></figure>
@@ -1966,6 +1940,32 @@
 ]]></content>
       <categories>
         <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>bash</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-op</title>
+    <url>/jaheel.github.io/2020/10/19/hexo-op/</url>
+    <content><![CDATA[<h1 id="hexo-op"><a href="#hexo-op" class="headerlink" title="hexo op"></a>hexo op</h1><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<a id="more"></a>
+
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>babun</category>
       </categories>
       <tags>
         <tag>bash</tag>
@@ -2178,15 +2178,18 @@
       </tags>
   </entry>
   <entry>
-    <title>图（Floyd算法）</title>
-    <url>/jaheel.github.io/2020/10/19/%E5%9B%BE%EF%BC%88Floyd%E7%AE%97%E6%B3%95%EF%BC%89/</url>
+    <title>图（Dijkstra算法）</title>
+    <url>/jaheel.github.io/2020/10/19/%E5%9B%BE%EF%BC%88Dijkstra%E7%AE%97%E6%B3%95%EF%BC%89/</url>
     <content><![CDATA[<p>教材：严版数据结构</p>
-<p>页码：P191-192</p>
-<p>实现：算法7.16（解析：图7.37）</p>
+<p>页码：P189</p>
+<p>实现：算法7.15</p>
+<p>IDE：VS2015</p>
 <p>代码如下：</p>
 <a id="more"></a>
 
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY 32767 <span class="comment">//最大值</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_VERTEX_NUM 20 <span class="comment">//最大顶点个数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VRType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">bool</span>*** PathMatrix;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//&#123;有向图，有向网，无向图，无向网&#125;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> &#123;</span> DG, DN, UDG, UDN &#125;GraphKind;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcCell</span> &#123;</span></span><br><span class="line">	VRType adj;<span class="comment">//VRType是顶点关系类型。对无权图，用1或0</span></span><br><span class="line">			   <span class="comment">//表示相邻否；对带权图，则为权值类型</span></span><br><span class="line">	InfoType *info;<span class="comment">//该弧相关信息的指针</span></span><br><span class="line">&#125;ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> ArcCell** DistancMatrix;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	VertexType vexs[MAX_VERTEX_NUM];<span class="comment">//顶点向量</span></span><br><span class="line">	AdjMatrix arcs;<span class="comment">//邻接矩阵</span></span><br><span class="line">	<span class="keyword">int</span> vexnum, arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">	GraphKind kind;<span class="comment">//图的种类标志</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//在G中找到v对应的顶点位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateVex</span><span class="params">(MGraph G, <span class="keyword">char</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (G.vexs[i] == v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">			<span class="keyword">if</span> (i == j)</span><br><span class="line">			&#123;</span><br><span class="line">				G.arcs[i][j].adj = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list</span><span class="params">(MGraph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出邻接矩阵：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[i] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j].adj == INFINITY)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; <span class="string">&quot;∞&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; G.arcs[i][j].adj;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShortestPath_FLOYD</span><span class="params">(MGraph G,PathMatrix &amp;P, DistancMatrix &amp;D)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, v, w,u;</span><br><span class="line">	P = (<span class="keyword">bool</span> ***)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span> *)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">		P[i] = (<span class="keyword">bool</span> **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;G.vexnum;++j)</span><br><span class="line">		P[i][j] = (<span class="keyword">bool</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*G.vexnum);</span><br><span class="line"> </span><br><span class="line">	D = (ArcCell **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ArcCell)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		D[i]= (ArcCell *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ArcCell)*G.vexnum);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//各对结点之间初始已知路径及距离</span></span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			D[v][w] = G.arcs[v][w];</span><br><span class="line">			<span class="keyword">for</span> (u = <span class="number">0</span>; u &lt; G.vexnum; ++u)</span><br><span class="line">			&#123;</span><br><span class="line">				P[v][w][u] = FALSE;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//从v到w有直接路径</span></span><br><span class="line">			<span class="keyword">if</span> (D[v][w].adj &lt; INFINITY&amp;&amp;D[v][w].adj!=<span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				P[v][w][v] = TRUE;</span><br><span class="line">				P[v][w][w] = TRUE;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (u = <span class="number">0</span>; u &lt; G.vexnum; ++u)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//从v经u到w的一条路径更短</span></span><br><span class="line">				<span class="keyword">if</span> (D[v][u].adj + D[u][w].adj &lt; D[v][w].adj)</span><br><span class="line">				&#123;</span><br><span class="line">					D[v][w].adj = D[v][u].adj + D[u][w].adj;</span><br><span class="line">					<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">					&#123;</span><br><span class="line">						P[v][w][i] = P[v][u][i] || P[u][w][i];</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;<span class="comment">//if</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出每一对顶点之间的最短路径长度如下：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[v] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (D[v][w].adj == INFINITY)</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%4s&quot;</span>, <span class="string">&quot;∞&quot;</span>);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%4d&quot;</span>, D[v][w].adj);			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MGraph G;</span><br><span class="line">	<span class="keyword">int</span> v0;</span><br><span class="line">	PathMatrix P;</span><br><span class="line">	DistancMatrix D;</span><br><span class="line">	CreateDN(G);</span><br><span class="line">	<span class="built_in">list</span>(G);</span><br><span class="line">	ShortestPath_FLOYD(G, P, D);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY 32767 <span class="comment">//最大值</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_VERTEX_NUM 20 <span class="comment">//最大顶点个数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VRType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">bool</span>** PathMatrix;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//&#123;有向图，有向网，无向图，无向网&#125;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> &#123;</span> DG, DN, UDG, UDN &#125;GraphKind;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcCell</span> &#123;</span></span><br><span class="line">	VRType adj;<span class="comment">//VRType是顶点关系类型。对无权图，用1或0</span></span><br><span class="line">			   <span class="comment">//表示相邻否；对带权图，则为权值类型</span></span><br><span class="line">	InfoType *info;<span class="comment">//该弧相关信息的指针</span></span><br><span class="line">&#125;ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> ArcCell* ShortPathTable;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	VertexType vexs[MAX_VERTEX_NUM];<span class="comment">//顶点向量</span></span><br><span class="line">	AdjMatrix arcs;<span class="comment">//邻接矩阵</span></span><br><span class="line">	<span class="keyword">int</span> vexnum, arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">	GraphKind kind;<span class="comment">//图的种类标志</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//在G中找到v对应的顶点位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateVex</span><span class="params">(MGraph G, <span class="keyword">char</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (G.vexs[i] == v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list</span><span class="params">(MGraph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出邻接矩阵：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[i] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j].adj == INFINITY)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; <span class="string">&quot;∞&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; G.arcs[i][j].adj;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShortestPath_DIJ</span><span class="params">(MGraph G, <span class="keyword">int</span> v0, PathMatrix &amp;P, ShortPathTable &amp;D)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, v, w;</span><br><span class="line">	P = (<span class="keyword">bool</span> **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span> *)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">		P[i] = (<span class="keyword">bool</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*G.vexnum);</span><br><span class="line">	D = (ArcCell *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ArcCell)*G.vexnum);</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">bool</span> *<span class="keyword">final</span> = <span class="keyword">new</span> <span class="keyword">bool</span>[G.vexnum];</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">final</span>[v] = FALSE;</span><br><span class="line">		D[v] = G.arcs[v0][v];</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			P[v][w] = FALSE;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (D[v].adj &lt; INFINITY)</span><br><span class="line">		&#123;</span><br><span class="line">			P[v][v0] = TRUE;</span><br><span class="line">			P[v][v] = TRUE;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="comment">//for</span></span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> min;</span><br><span class="line">	<span class="comment">//初始化,v0顶点属于S集</span></span><br><span class="line">	D[v0].adj = <span class="number">0</span>; <span class="keyword">final</span>[v0] = TRUE;</span><br><span class="line">	<span class="comment">//开始主循环，每次求得v0到某个顶点的最短路径，并加v到S集</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		min = INFINITY;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//w顶点在V-S中</span></span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w])</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//w顶点离v0顶点更近</span></span><br><span class="line">				<span class="keyword">if</span> (D[w].adj &lt; min)</span><br><span class="line">				&#123;</span><br><span class="line">					v = w;</span><br><span class="line">					min = D[w].adj;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">final</span>[v] = TRUE;<span class="comment">//离v0顶点最近的v加入S集</span></span><br><span class="line">		<span class="comment">//更新当前最短路径和距离</span></span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//修改D[w]和P[w]</span></span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w] &amp;&amp; (min + G.arcs[v][w].adj &lt; D[w].adj))</span><br><span class="line">			&#123;</span><br><span class="line">				D[w].adj = min + G.arcs[v][w].adj;</span><br><span class="line">				P[w] = P[v];</span><br><span class="line">				P[w][w] = TRUE;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(i!=v0)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%3c  %3c  &quot;</span>,G.vexs[v0],G.vexs[i]);</span><br><span class="line">			<span class="keyword">if</span> (D[i].adj != INFINITY)</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%5d    &quot;</span>, D[i]);</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;(&quot;</span>;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (P[i][j])</span><br><span class="line">					<span class="built_in">cout</span> &lt;&lt; G.vexs[j];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;)&quot;</span>;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MGraph G;</span><br><span class="line">	<span class="keyword">int</span> v0;</span><br><span class="line">	PathMatrix P;</span><br><span class="line">	ShortPathTable D;</span><br><span class="line">	CreateDN(G);</span><br><span class="line">	<span class="built_in">list</span>(G);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入源点序号v0:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; v0;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出从源点&quot;</span> &lt;&lt; v0 &lt;&lt; <span class="string">&quot;到其余顶点的最短路径如下：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;始点 终点 路径长度 最短路径&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	ShortestPath_DIJ(G, v0, P, D);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2200,18 +2203,15 @@
       </tags>
   </entry>
   <entry>
-    <title>图（Dijkstra算法）</title>
-    <url>/jaheel.github.io/2020/10/19/%E5%9B%BE%EF%BC%88Dijkstra%E7%AE%97%E6%B3%95%EF%BC%89/</url>
+    <title>图（Floyd算法）</title>
+    <url>/jaheel.github.io/2020/10/19/%E5%9B%BE%EF%BC%88Floyd%E7%AE%97%E6%B3%95%EF%BC%89/</url>
     <content><![CDATA[<p>教材：严版数据结构</p>
-<p>页码：P189</p>
-<p>实现：算法7.15</p>
-<p>IDE：VS2015</p>
+<p>页码：P191-192</p>
+<p>实现：算法7.16（解析：图7.37）</p>
 <p>代码如下：</p>
 <a id="more"></a>
 
-
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY 32767 <span class="comment">//最大值</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_VERTEX_NUM 20 <span class="comment">//最大顶点个数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VRType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">bool</span>** PathMatrix;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//&#123;有向图，有向网，无向图，无向网&#125;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> &#123;</span> DG, DN, UDG, UDN &#125;GraphKind;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcCell</span> &#123;</span></span><br><span class="line">	VRType adj;<span class="comment">//VRType是顶点关系类型。对无权图，用1或0</span></span><br><span class="line">			   <span class="comment">//表示相邻否；对带权图，则为权值类型</span></span><br><span class="line">	InfoType *info;<span class="comment">//该弧相关信息的指针</span></span><br><span class="line">&#125;ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> ArcCell* ShortPathTable;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	VertexType vexs[MAX_VERTEX_NUM];<span class="comment">//顶点向量</span></span><br><span class="line">	AdjMatrix arcs;<span class="comment">//邻接矩阵</span></span><br><span class="line">	<span class="keyword">int</span> vexnum, arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">	GraphKind kind;<span class="comment">//图的种类标志</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//在G中找到v对应的顶点位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateVex</span><span class="params">(MGraph G, <span class="keyword">char</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (G.vexs[i] == v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list</span><span class="params">(MGraph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出邻接矩阵：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[i] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j].adj == INFINITY)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; <span class="string">&quot;∞&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; G.arcs[i][j].adj;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShortestPath_DIJ</span><span class="params">(MGraph G, <span class="keyword">int</span> v0, PathMatrix &amp;P, ShortPathTable &amp;D)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, v, w;</span><br><span class="line">	P = (<span class="keyword">bool</span> **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span> *)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">		P[i] = (<span class="keyword">bool</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*G.vexnum);</span><br><span class="line">	D = (ArcCell *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ArcCell)*G.vexnum);</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">bool</span> *<span class="keyword">final</span> = <span class="keyword">new</span> <span class="keyword">bool</span>[G.vexnum];</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">final</span>[v] = FALSE;</span><br><span class="line">		D[v] = G.arcs[v0][v];</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			P[v][w] = FALSE;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (D[v].adj &lt; INFINITY)</span><br><span class="line">		&#123;</span><br><span class="line">			P[v][v0] = TRUE;</span><br><span class="line">			P[v][v] = TRUE;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="comment">//for</span></span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> min;</span><br><span class="line">	<span class="comment">//初始化,v0顶点属于S集</span></span><br><span class="line">	D[v0].adj = <span class="number">0</span>; <span class="keyword">final</span>[v0] = TRUE;</span><br><span class="line">	<span class="comment">//开始主循环，每次求得v0到某个顶点的最短路径，并加v到S集</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		min = INFINITY;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//w顶点在V-S中</span></span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w])</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//w顶点离v0顶点更近</span></span><br><span class="line">				<span class="keyword">if</span> (D[w].adj &lt; min)</span><br><span class="line">				&#123;</span><br><span class="line">					v = w;</span><br><span class="line">					min = D[w].adj;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">final</span>[v] = TRUE;<span class="comment">//离v0顶点最近的v加入S集</span></span><br><span class="line">		<span class="comment">//更新当前最短路径和距离</span></span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//修改D[w]和P[w]</span></span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w] &amp;&amp; (min + G.arcs[v][w].adj &lt; D[w].adj))</span><br><span class="line">			&#123;</span><br><span class="line">				D[w].adj = min + G.arcs[v][w].adj;</span><br><span class="line">				P[w] = P[v];</span><br><span class="line">				P[w][w] = TRUE;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(i!=v0)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%3c  %3c  &quot;</span>,G.vexs[v0],G.vexs[i]);</span><br><span class="line">			<span class="keyword">if</span> (D[i].adj != INFINITY)</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%5d    &quot;</span>, D[i]);</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;(&quot;</span>;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (P[i][j])</span><br><span class="line">					<span class="built_in">cout</span> &lt;&lt; G.vexs[j];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;)&quot;</span>;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MGraph G;</span><br><span class="line">	<span class="keyword">int</span> v0;</span><br><span class="line">	PathMatrix P;</span><br><span class="line">	ShortPathTable D;</span><br><span class="line">	CreateDN(G);</span><br><span class="line">	<span class="built_in">list</span>(G);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入源点序号v0:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; v0;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出从源点&quot;</span> &lt;&lt; v0 &lt;&lt; <span class="string">&quot;到其余顶点的最短路径如下：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;始点 终点 路径长度 最短路径&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	ShortestPath_DIJ(G, v0, P, D);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY 32767 <span class="comment">//最大值</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_VERTEX_NUM 20 <span class="comment">//最大顶点个数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VRType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">bool</span>*** PathMatrix;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//&#123;有向图，有向网，无向图，无向网&#125;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> &#123;</span> DG, DN, UDG, UDN &#125;GraphKind;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcCell</span> &#123;</span></span><br><span class="line">	VRType adj;<span class="comment">//VRType是顶点关系类型。对无权图，用1或0</span></span><br><span class="line">			   <span class="comment">//表示相邻否；对带权图，则为权值类型</span></span><br><span class="line">	InfoType *info;<span class="comment">//该弧相关信息的指针</span></span><br><span class="line">&#125;ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> ArcCell** DistancMatrix;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	VertexType vexs[MAX_VERTEX_NUM];<span class="comment">//顶点向量</span></span><br><span class="line">	AdjMatrix arcs;<span class="comment">//邻接矩阵</span></span><br><span class="line">	<span class="keyword">int</span> vexnum, arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">	GraphKind kind;<span class="comment">//图的种类标志</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//在G中找到v对应的顶点位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateVex</span><span class="params">(MGraph G, <span class="keyword">char</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (G.vexs[i] == v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">			<span class="keyword">if</span> (i == j)</span><br><span class="line">			&#123;</span><br><span class="line">				G.arcs[i][j].adj = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list</span><span class="params">(MGraph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出邻接矩阵：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[i] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j].adj == INFINITY)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; <span class="string">&quot;∞&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; G.arcs[i][j].adj;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShortestPath_FLOYD</span><span class="params">(MGraph G,PathMatrix &amp;P, DistancMatrix &amp;D)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, v, w,u;</span><br><span class="line">	P = (<span class="keyword">bool</span> ***)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span> *)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">		P[i] = (<span class="keyword">bool</span> **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;G.vexnum;++j)</span><br><span class="line">		P[i][j] = (<span class="keyword">bool</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*G.vexnum);</span><br><span class="line"> </span><br><span class="line">	D = (ArcCell **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ArcCell)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		D[i]= (ArcCell *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ArcCell)*G.vexnum);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//各对结点之间初始已知路径及距离</span></span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			D[v][w] = G.arcs[v][w];</span><br><span class="line">			<span class="keyword">for</span> (u = <span class="number">0</span>; u &lt; G.vexnum; ++u)</span><br><span class="line">			&#123;</span><br><span class="line">				P[v][w][u] = FALSE;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//从v到w有直接路径</span></span><br><span class="line">			<span class="keyword">if</span> (D[v][w].adj &lt; INFINITY&amp;&amp;D[v][w].adj!=<span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				P[v][w][v] = TRUE;</span><br><span class="line">				P[v][w][w] = TRUE;</span><br><span class="line">			&#125;<span class="comment">//if</span></span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (u = <span class="number">0</span>; u &lt; G.vexnum; ++u)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//从v经u到w的一条路径更短</span></span><br><span class="line">				<span class="keyword">if</span> (D[v][u].adj + D[u][w].adj &lt; D[v][w].adj)</span><br><span class="line">				&#123;</span><br><span class="line">					D[v][w].adj = D[v][u].adj + D[u][w].adj;</span><br><span class="line">					<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">					&#123;</span><br><span class="line">						P[v][w][i] = P[v][u][i] || P[u][w][i];</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;<span class="comment">//if</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出每一对顶点之间的最短路径长度如下：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[v] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (D[v][w].adj == INFINITY)</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%4s&quot;</span>, <span class="string">&quot;∞&quot;</span>);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%4d&quot;</span>, D[v][w].adj);			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MGraph G;</span><br><span class="line">	<span class="keyword">int</span> v0;</span><br><span class="line">	PathMatrix P;</span><br><span class="line">	DistancMatrix D;</span><br><span class="line">	CreateDN(G);</span><br><span class="line">	<span class="built_in">list</span>(G);</span><br><span class="line">	ShortestPath_FLOYD(G, P, D);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2329,37 +2329,6 @@
       </tags>
   </entry>
   <entry>
-    <title>栈（实现、应用）</title>
-    <url>/jaheel.github.io/2020/10/19/%E6%A0%88%EF%BC%88%E5%AE%9E%E7%8E%B0%E3%80%81%E5%BA%94%E7%94%A8%EF%BC%89/</url>
-    <content><![CDATA[<p>教材：严版数据结构</p>
-<p>页码：P46</p>
-<p>实现：</p>
-<ol>
-<li>初始化顺序栈</li>
-<li>创建顺序栈</li>
-<li>判断栈空</li>
-<li>输出顺序栈</li>
-<li>取栈顶元素</li>
-<li>入栈</li>
-<li>出栈</li>
-</ol>
-<p>代码如下：</p>
-<a id="more"></a>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACK_INIT_SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACKINCREMENT 10</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> SElemType;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	SElemType *base;</span><br><span class="line">	SElemType *top;</span><br><span class="line">	<span class="keyword">int</span> stacksize;</span><br><span class="line">&#125;SqStack;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">InitStack</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	S.base = (SElemType *)<span class="built_in">malloc</span>(STACK_INIT_SIZE * <span class="keyword">sizeof</span>(SElemType));</span><br><span class="line">	<span class="keyword">if</span> (!S.base)</span><br><span class="line">		<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">	S.top = S.base;</span><br><span class="line">	S.stacksize = STACK_INIT_SIZE;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">StackEmpty</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> TRUE;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> FALSE;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">GetTop</span><span class="params">(SqStack &amp;S, SElemType &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	 e=  *(S.top<span class="number">-1</span>);</span><br><span class="line">	 <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">Push</span><span class="params">(SqStack &amp;S, SElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (S.top - S.base &gt;= S.stacksize)</span><br><span class="line">	&#123;</span><br><span class="line">		S.base = (SElemType *)<span class="built_in">realloc</span>(S.base, (S.stacksize + STACKINCREMENT) * <span class="keyword">sizeof</span>(SElemType));</span><br><span class="line">		<span class="keyword">if</span> (!S.base)</span><br><span class="line">			<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">		S.top = S.base + S.stacksize;</span><br><span class="line">		S.stacksize += STACKINCREMENT;</span><br><span class="line">	&#125;</span><br><span class="line">	*S.top++ = e;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">Pop</span><span class="params">(SqStack &amp;S, SElemType &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	e = *--S.top;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">Stackoutput</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SElemType *p;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	p = S.base;</span><br><span class="line">	<span class="keyword">while</span> (p != S.top)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *p);</span><br><span class="line">		p++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">StackTraverse</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SElemType *p;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	p = S.top - <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (p != S.base - <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *p);</span><br><span class="line">		p--;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, n, k, h, a, b;</span><br><span class="line">	SqStack S;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;创建一个空栈!\n&quot;</span>);</span><br><span class="line">	InitStack(S);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;判断栈是否为空！\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;StackEmpty(S)=%d\n&quot;</span>, StackEmpty(S));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;创建栈的元素个数：\n&quot;</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输入%d个入栈元素的值：\n&quot;</span>, n);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; k;</span><br><span class="line">		Push(S, k);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;逆序输出顺序栈元素值：\n&quot;</span>);</span><br><span class="line">	Stackoutput(S);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出顺序栈元素值：\n&quot;</span>);</span><br><span class="line">	StackTraverse(S);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输入入栈元素值：&quot;</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; h;</span><br><span class="line">	Push(S, h);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出入栈后的顺序栈元素值：\n&quot;</span>);</span><br><span class="line">	StackTraverse(S);</span><br><span class="line">	Pop(S, a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出第一个出栈元素值：%d\n&quot;</span>, a);</span><br><span class="line">	Pop(S, a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出第二个出栈元素值：%d\n&quot;</span>, a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出两次出栈后顺序栈元素值：&quot;</span>);</span><br><span class="line">	StackTraverse(S);</span><br><span class="line">	GetTop(S, b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出栈顶元素值：%d\n&quot;</span>, b);</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-        <tag>data structure</tag>
-        <tag>Algorithm</tag>
-        <tag>Stack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>特征选择与稀疏学习</title>
     <url>/jaheel.github.io/2020/10/19/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E4%B8%8E%E7%A8%80%E7%96%8F%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>特征(feature)</p>
@@ -2389,6 +2358,37 @@
       <tags>
         <tag>Algorithm</tag>
         <tag>Machine Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>栈（实现、应用）</title>
+    <url>/jaheel.github.io/2020/10/19/%E6%A0%88%EF%BC%88%E5%AE%9E%E7%8E%B0%E3%80%81%E5%BA%94%E7%94%A8%EF%BC%89/</url>
+    <content><![CDATA[<p>教材：严版数据结构</p>
+<p>页码：P46</p>
+<p>实现：</p>
+<ol>
+<li>初始化顺序栈</li>
+<li>创建顺序栈</li>
+<li>判断栈空</li>
+<li>输出顺序栈</li>
+<li>取栈顶元素</li>
+<li>入栈</li>
+<li>出栈</li>
+</ol>
+<p>代码如下：</p>
+<a id="more"></a>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACK_INIT_SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACKINCREMENT 10</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> SElemType;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	SElemType *base;</span><br><span class="line">	SElemType *top;</span><br><span class="line">	<span class="keyword">int</span> stacksize;</span><br><span class="line">&#125;SqStack;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">InitStack</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	S.base = (SElemType *)<span class="built_in">malloc</span>(STACK_INIT_SIZE * <span class="keyword">sizeof</span>(SElemType));</span><br><span class="line">	<span class="keyword">if</span> (!S.base)</span><br><span class="line">		<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">	S.top = S.base;</span><br><span class="line">	S.stacksize = STACK_INIT_SIZE;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">StackEmpty</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> TRUE;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> FALSE;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">GetTop</span><span class="params">(SqStack &amp;S, SElemType &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	 e=  *(S.top<span class="number">-1</span>);</span><br><span class="line">	 <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">Push</span><span class="params">(SqStack &amp;S, SElemType e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (S.top - S.base &gt;= S.stacksize)</span><br><span class="line">	&#123;</span><br><span class="line">		S.base = (SElemType *)<span class="built_in">realloc</span>(S.base, (S.stacksize + STACKINCREMENT) * <span class="keyword">sizeof</span>(SElemType));</span><br><span class="line">		<span class="keyword">if</span> (!S.base)</span><br><span class="line">			<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">		S.top = S.base + S.stacksize;</span><br><span class="line">		S.stacksize += STACKINCREMENT;</span><br><span class="line">	&#125;</span><br><span class="line">	*S.top++ = e;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">Pop</span><span class="params">(SqStack &amp;S, SElemType &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	e = *--S.top;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">Stackoutput</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SElemType *p;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	p = S.base;</span><br><span class="line">	<span class="keyword">while</span> (p != S.top)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *p);</span><br><span class="line">		p++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">StackTraverse</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SElemType *p;</span><br><span class="line">	<span class="keyword">if</span> (S.top == S.base)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	p = S.top - <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (p != S.base - <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *p);</span><br><span class="line">		p--;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, n, k, h, a, b;</span><br><span class="line">	SqStack S;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;创建一个空栈!\n&quot;</span>);</span><br><span class="line">	InitStack(S);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;判断栈是否为空！\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;StackEmpty(S)=%d\n&quot;</span>, StackEmpty(S));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;创建栈的元素个数：\n&quot;</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输入%d个入栈元素的值：\n&quot;</span>, n);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; k;</span><br><span class="line">		Push(S, k);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;逆序输出顺序栈元素值：\n&quot;</span>);</span><br><span class="line">	Stackoutput(S);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出顺序栈元素值：\n&quot;</span>);</span><br><span class="line">	StackTraverse(S);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输入入栈元素值：&quot;</span>);</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; h;</span><br><span class="line">	Push(S, h);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出入栈后的顺序栈元素值：\n&quot;</span>);</span><br><span class="line">	StackTraverse(S);</span><br><span class="line">	Pop(S, a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出第一个出栈元素值：%d\n&quot;</span>, a);</span><br><span class="line">	Pop(S, a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出第二个出栈元素值：%d\n&quot;</span>, a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出两次出栈后顺序栈元素值：&quot;</span>);</span><br><span class="line">	StackTraverse(S);</span><br><span class="line">	GetTop(S, b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出栈顶元素值：%d\n&quot;</span>, b);</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>data structure</tag>
+        <tag>Algorithm</tag>
+        <tag>Stack</tag>
       </tags>
   </entry>
   <entry>
@@ -2574,35 +2574,6 @@
       </tags>
   </entry>
   <entry>
-    <title>降维与度量学习</title>
-    <url>/jaheel.github.io/2020/10/19/%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>懒惰学习(lazy learning)</p>
-<blockquote>
-<p>在训练阶段把样本保存起来，训练时间开销为零，待收到测试样本后再进行处理</p>
-</blockquote>
-<p>急切学习(eager learning)</p>
-<blockquote>
-<p>再训练阶段对样本进行学习处理的方法</p>
-</blockquote>
-<p>降维(dimension reduction)</p>
-<blockquote>
-<p>通过某种数学变换将原始高维属性空间转变为一个低维“子空间”</p>
-<p>在这个子空间中样本密度大幅提高，距离计算也变得更为容易</p>
-</blockquote>
-<p>多维缩放(Multiple Dimensional Scaling, MDS)</p>
-<p>主成分分析(Principle Component Analysis, PCA)</p>
-<p>核主成分分析(Kernelized PCA, KPCA)</p>
-<p>等度量映射(Isometric Mapping)</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>Algorithm</tag>
-        <tag>Machine Learning</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>集成学习</title>
     <url>/jaheel.github.io/2020/10/19/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>集成学习：构建并结合多个学习器来完成学习任务（多分类器系统）</p>
@@ -2657,6 +2628,35 @@
 </blockquote>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>Algorithm</tag>
+        <tag>Machine Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>降维与度量学习</title>
+    <url>/jaheel.github.io/2020/10/19/%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>懒惰学习(lazy learning)</p>
+<blockquote>
+<p>在训练阶段把样本保存起来，训练时间开销为零，待收到测试样本后再进行处理</p>
+</blockquote>
+<p>急切学习(eager learning)</p>
+<blockquote>
+<p>再训练阶段对样本进行学习处理的方法</p>
+</blockquote>
+<p>降维(dimension reduction)</p>
+<blockquote>
+<p>通过某种数学变换将原始高维属性空间转变为一个低维“子空间”</p>
+<p>在这个子空间中样本密度大幅提高，距离计算也变得更为容易</p>
+</blockquote>
+<p>多维缩放(Multiple Dimensional Scaling, MDS)</p>
+<p>主成分分析(Principle Component Analysis, PCA)</p>
+<p>核主成分分析(Kernelized PCA, KPCA)</p>
+<p>等度量映射(Isometric Mapping)</p>
 ]]></content>
       <categories>
         <category>机器学习</category>
