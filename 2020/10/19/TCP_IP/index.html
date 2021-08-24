@@ -1,0 +1,585 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TCP/IP学习笔记 | Alex</title><meta name="keywords" content="TCP,netwox,wireshark"><meta name="author" content="Fons Hui"><meta name="copyright" content="Fons Hui"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="学习自C语言中文网 1 硬件组成1.1 网卡也称网络适配器(Network Adapter)，连接计算机和传输介质的接口。 计算机数据转换为能够通过传输介质传输的信号。 1.1.1 有线网卡“线”指的是网线。 1.1.2 无线网卡无线信号连接。通常指Wi-Fi网络的无线网卡。 1.1.3 蓝牙适配器与无线网卡的区别是数据通信方式不同。 1.2 网络电缆用来连接网络中的各个设备，供设备之间进行数据通">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TCP&#x2F;IP学习笔记">
+<meta property="og:url" content="http://jaheel.github.io/blog/2020/10/19/TCP_IP/index.html">
+<meta property="og:site_name" content="Alex">
+<meta property="og:description" content="学习自C语言中文网 1 硬件组成1.1 网卡也称网络适配器(Network Adapter)，连接计算机和传输介质的接口。 计算机数据转换为能够通过传输介质传输的信号。 1.1.1 有线网卡“线”指的是网线。 1.1.2 无线网卡无线信号连接。通常指Wi-Fi网络的无线网卡。 1.1.3 蓝牙适配器与无线网卡的区别是数据通信方式不同。 1.2 网络电缆用来连接网络中的各个设备，供设备之间进行数据通">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2020-10-19T13:28:26.494Z">
+<meta property="article:modified_time" content="2020-02-28T09:53:08.000Z">
+<meta property="article:author" content="Fons Hui">
+<meta property="article:tag" content="TCP">
+<meta property="article:tag" content="netwox">
+<meta property="article:tag" content="wireshark">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/jaheel.github.io/img/favicon.png"><link rel="canonical" href="http://jaheel.github.io/blog/2020/10/19/TCP_IP/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/jaheel.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/jaheel.github.io/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'TCP/IP学习笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-02-28 17:53:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/jaheel.github.io/atom.xml" title="Alex" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/jaheel.github.io/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/jaheel.github.io/archives/"><div class="headline">Articles</div><div class="length-num">39</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/jaheel.github.io/tags/"><div class="headline">Tags</div><div class="length-num">37</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/jaheel.github.io/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/jaheel.github.io/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/jaheel.github.io/">Alex</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/jaheel.github.io/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/jaheel.github.io/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">TCP/IP学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-10-19T13:28:26.494Z" title="Created 2020-10-19 21:28:26">2020-10-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-02-28T09:53:08.000Z" title="Updated 2020-02-28 17:53:08">2020-02-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/jaheel.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="TCP/IP学习笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>学习自C语言中文网</p>
+<h1 id="1-硬件组成"><a href="#1-硬件组成" class="headerlink" title="1 硬件组成"></a>1 硬件组成</h1><h2 id="1-1-网卡"><a href="#1-1-网卡" class="headerlink" title="1.1 网卡"></a>1.1 网卡</h2><p>也称网络适配器(Network Adapter)，连接计算机和传输介质的接口。</p>
+<p>计算机数据转换为能够通过传输介质传输的信号。</p>
+<h3 id="1-1-1-有线网卡"><a href="#1-1-1-有线网卡" class="headerlink" title="1.1.1 有线网卡"></a>1.1.1 有线网卡</h3><p>“线”指的是网线。</p>
+<h3 id="1-1-2-无线网卡"><a href="#1-1-2-无线网卡" class="headerlink" title="1.1.2 无线网卡"></a>1.1.2 无线网卡</h3><p>无线信号连接。通常指Wi-Fi网络的无线网卡。</p>
+<h3 id="1-1-3-蓝牙适配器"><a href="#1-1-3-蓝牙适配器" class="headerlink" title="1.1.3 蓝牙适配器"></a>1.1.3 蓝牙适配器</h3><p>与无线网卡的区别是数据通信方式不同。</p>
+<h2 id="1-2-网络电缆"><a href="#1-2-网络电缆" class="headerlink" title="1.2 网络电缆"></a>1.2 网络电缆</h2><p>用来连接网络中的各个设备，供设备之间进行数据通信。</p>
+<h3 id="1-2-1-双绞线"><a href="#1-2-1-双绞线" class="headerlink" title="1.2.1 双绞线"></a>1.2.1 双绞线</h3><p>两根具有绝缘保护层的铜导线缠绕组成</p>
+<p>EIA/TIA 568B线序：橙白、橙、绿白、蓝、蓝白、绿、棕白、棕</p>
+<h3 id="1-2-2-光纤"><a href="#1-2-2-光纤" class="headerlink" title="1.2.2 光纤"></a>1.2.2 光纤</h3><p>传输光信号的细而柔软的媒质。</p>
+<p>光纤两端的”光猫“进行信号转换。</p>
+<h3 id="1-2-3-电话线"><a href="#1-2-3-电话线" class="headerlink" title="1.2.3 电话线"></a>1.2.3 电话线</h3><p>连接电话的线，线数比双绞线少</p>
+<a id="more"></a>
+
+<h2 id="1-3-网络设备"><a href="#1-3-网络设备" class="headerlink" title="1.3 网络设备"></a>1.3 网络设备</h2><p>网络组成中的设备</p>
+<h3 id="1-3-1-交换机"><a href="#1-3-1-交换机" class="headerlink" title="1.3.1 交换机"></a>1.3.1 交换机</h3><p>可将多个网络设备连接组成一个局域网。</p>
+<p>用于数据交换</p>
+<h3 id="1-3-2-路由器"><a href="#1-3-2-路由器" class="headerlink" title="1.3.2 路由器"></a>1.3.2 路由器</h3><p>Router</p>
+<p>又称网关设备(Gateway)</p>
+<p>用于连接多个逻辑上分开的网络。</p>
+<h3 id="1-3-3-调制解调器"><a href="#1-3-3-调制解调器" class="headerlink" title="1.3.3 调制解调器"></a>1.3.3 调制解调器</h3><p>Modem</p>
+<p>俗称”猫”</p>
+<h1 id="2-网络协议"><a href="#2-网络协议" class="headerlink" title="2 网络协议"></a>2 网络协议</h1><h2 id="2-1-TCP-IP"><a href="#2-1-TCP-IP" class="headerlink" title="2.1 TCP/IP"></a>2.1 TCP/IP</h2><p>前身：ARPANET</p>
+<p>协议族：TCP、IP、ICMP、HTTP等</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>应用层</td>
+<td>为应用程序提供服务并规定应用程序中相关的通信细节。</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>为两台主机上的应用程序提供端到端的通信，提供流量控制、错误控制和确认服务。</td>
+</tr>
+<tr>
+<td>网际层</td>
+<td>提供独立于硬件的逻辑寻址，从而让数据能够在具有不同的物理结构的子网之间传递。负责寻找地址和路由选择的同时，网络层还可以实现拥塞控制、网际互联等功能。</td>
+</tr>
+<tr>
+<td>网络访问层</td>
+<td>提供了与物理网络连接的接口。针对传输介质设置数据格式，根据硬件的物理地址实现数据的寻址，对数据在物理网络中的传递提供错误控制。</td>
+</tr>
+</tbody></table>
+<h2 id="2-2-OSI"><a href="#2-2-OSI" class="headerlink" title="2.2 OSI"></a>2.2 OSI</h2><table>
+<thead>
+<tr>
+<th>层次</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>应用层</td>
+<td>为应用程序提供服务并规定应用程序中相关的通信细节。常见的协议包括超文本传输协议（HTTP）、简单邮件传送协议（SMTP）和远程登录（Telnet）协议等。</td>
+</tr>
+<tr>
+<td>表示层</td>
+<td>将应用处理的信息转换为适合网络传输的格式，或将来自下一层的数据转换为上层能够处理的格式。该层主要负责数据格式的转换，确保一个系统的应用层信息可被另一个系统应用层读取。</td>
+</tr>
+<tr>
+<td>会话层</td>
+<td>负责建立和断开通信连接（数据流动的逻辑通路），以及记忆数据的分隔等数据传输相关的管理。</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>只在通信双方的节点上（比如计算机终端）进行处理，无须在路由器上处理。</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td>将数据传输到目标地址，主要负责寻找地址和路由选择，网络层还可以实现拥塞控制、网际互联等功能。</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+<td>负责物理层面上互连的节点间的通信传输。例如，一个以太网相连的两个节点之间的通信。该层的作用包括：物理地址寻址、数据的成帧、流量控制、数据的检错和重发等。</td>
+</tr>
+<tr>
+<td>物理层</td>
+<td>利用传输介质为数据链路层提供物理连接，实现比特流的透明传输。</td>
+</tr>
+</tbody></table>
+<h1 id="3-学习工具"><a href="#3-学习工具" class="headerlink" title="3 学习工具"></a>3 学习工具</h1><h2 id="3-1-netwox"><a href="#3-1-netwox" class="headerlink" title="3.1 netwox"></a>3.1 netwox</h2><p>下载： <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/ntwox/">https://sourceforge.net/projects/ntwox/</a></p>
+<p>网络包的生成</p>
+<h2 id="3-2-wireshark"><a href="#3-2-wireshark" class="headerlink" title="3.2 wireshark"></a>3.2 wireshark</h2><p>下载： <a target="_blank" rel="noopener" href="http://www.wireshark.org/">http://www.wireshark.org</a></p>
+<p>网络包的分析</p>
+<p>协议数据包 5个层次：</p>
+<ul>
+<li>Frame：物理层数据帧</li>
+<li>Ethernet II：以太网帧头部</li>
+<li>Internet Protocol Version 4：网际层IP包头部</li>
+<li>TCP、UDP：传输层头部</li>
+<li>HTTP、DNS、SSDP：应用层信息</li>
+</ul>
+<p>物理层：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netwox 169</span><br><span class="line">//查看物理、虚拟网络适配器的详情</span><br></pre></td></tr></table></figure>
+
+
+
+<p>数据链路层：</p>
+<ul>
+<li><p>介质访问控制（Media Access Control，MAC）</p>
+<blockquote>
+<p>提供与网络适配器连接的接口</p>
+</blockquote>
+</li>
+<li><p>逻辑链路控制（Logical Link Control，LLC）</p>
+<blockquote>
+<p>对经过子网传递的帧进行错误检查，并且管理子网上通信设备之间的链路</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="4-层次协议"><a href="#4-层次协议" class="headerlink" title="4 层次协议"></a>4 层次协议</h1><h2 id="4-1-物理层"><a href="#4-1-物理层" class="headerlink" title="4.1 物理层"></a>4.1 物理层</h2><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>前同步码</td>
+<td>用来使接收端的适配器在接收 MAC 帧时能够迅速调整时钟频率，使它和发送端的频率相同。前同步码为 7 个字节，1 和 0 交替。</td>
+</tr>
+<tr>
+<td>帧开始定界符</td>
+<td>帧的起始符，为 1 个字节。前 6 位 1 和 0 交替，最后的两个连续的 1 表示告诉接收端适配器：“帧信息要来了，准备接收”。</td>
+</tr>
+</tbody></table>
+<h2 id="4-2-MAC层"><a href="#4-2-MAC层" class="headerlink" title="4.2 MAC层"></a>4.2 MAC层</h2><p>MAC地址：48bit，前24bit特定厂商，后24bit为厂商自定</p>
+<p>以太网帧（MAC帧）：</p>
+<p>目的地址：6字节</p>
+<p>源地址：6字节</p>
+<p>类型：2字节</p>
+<p>数据：46~1500字节</p>
+<p>FCS：4字节</p>
+<h2 id="4-3-IP层"><a href="#4-3-IP层" class="headerlink" title="4.3 IP层"></a>4.3 IP层</h2><p>探测局域网中所有主机的IP地址、主机名和MAC地址信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netwox 3 -a 192.168.0.0/24</span><br></pre></td></tr></table></figure>
+
+<p>探测域名主机所有IP地址</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netwox 3 -a www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<p>构造IP数据报</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netwox 38</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-3-1-IP协议"><a href="#4-3-1-IP协议" class="headerlink" title="4.3.1 IP协议"></a>4.3.1 IP协议</h3><p>IP数据报头部：20字节</p>
+<ol>
+<li><p>版本：4bit</p>
+</li>
+<li><p>首部长度：4bit</p>
+<blockquote>
+<p>表示范围：0~15（十进制）</p>
+<p>计算单位：4字节（表示15代表首部长度达到60字节）</p>
+</blockquote>
+</li>
+<li><p>区分服务：8bit</p>
+</li>
+<li><p>总长度：16bit</p>
+<blockquote>
+<p>首部和数据之和</p>
+<p>单位：字节</p>
+<p>最大长度：2^16-1=65535字节</p>
+</blockquote>
+</li>
+<li><p>标识：16bit</p>
+<blockquote>
+<p>具有相同的标识字段值的分片报文会被重组成原来的数据报</p>
+</blockquote>
+</li>
+<li><p>标志：3bit</p>
+<blockquote>
+<p>第一位：0</p>
+<p>第二位：DF（不分片）</p>
+<p>第三位：MF（更多分片）</p>
+</blockquote>
+</li>
+<li><p>片偏移：13bit</p>
+<blockquote>
+<p>计算单位：8字节</p>
+</blockquote>
+</li>
+<li><p>生存时间：8bit</p>
+</li>
+<li><p>协议：8bit</p>
+<blockquote>
+<p>TCP：6</p>
+<p>UDP：17</p>
+<p>ICMP：1</p>
+</blockquote>
+</li>
+<li><p>首部检验和：16bit</p>
+<blockquote>
+<p>校验数据报的首部，TTL发生变化，需重新计算</p>
+</blockquote>
+</li>
+<li><p>源地址：32bit</p>
+</li>
+<li><p>目的地址：32bit</p>
+</li>
+</ol>
+<h3 id="4-3-2-ICMP协议"><a href="#4-3-2-ICMP协议" class="headerlink" title="4.3.2 ICMP协议"></a>4.3.2 ICMP协议</h3><p>全称：Internet Control Message Protocol(控制报文协议)</p>
+<p>报文结构（8字节）：</p>
+<ol>
+<li>类型：1字节</li>
+<li>代码：1字节</li>
+<li>校验和：2字节</li>
+<li>不同类型和代码有不同的内容：4字节</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>回显应答（ping 应答）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>网络不可达</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>主机不可达</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>协议不可达</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>端口不可达</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>需要进行分片，但设置不分片位</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+<td>源站选路失败</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6</td>
+<td>目的网络未知</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7</td>
+<td>目的主机未知</td>
+</tr>
+<tr>
+<td>3</td>
+<td>9</td>
+<td>目的网络被强制禁止</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10</td>
+<td>目的主机被强制禁止</td>
+</tr>
+<tr>
+<td>3</td>
+<td>11</td>
+<td>由于服务类型 TOS，网络不可达</td>
+</tr>
+<tr>
+<td>3</td>
+<td>12</td>
+<td>由于服务类型 TOS，主机不可达</td>
+</tr>
+<tr>
+<td>3</td>
+<td>13</td>
+<td>由于过滤，通信被强制禁止</td>
+</tr>
+<tr>
+<td>3</td>
+<td>14</td>
+<td>主机越权</td>
+</tr>
+<tr>
+<td>3</td>
+<td>15</td>
+<td>优先中止失效</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>源端被关闭（基本流控制）</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>对网络重定向</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>对主机重定向</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>对服务类型和网络重定向</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td>对服务类型和主机重定向</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0</td>
+<td>回显请求（ping 请求）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0</td>
+<td>路由器通告</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0</td>
+<td>路由器请求</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0</td>
+<td>传输期间生存时间为 0</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>在数据报组装期间生存时间为 0</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0</td>
+<td>坏的 IP 首部</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1</td>
+<td>缺少必需的选项</td>
+</tr>
+<tr>
+<td>13</td>
+<td>0</td>
+<td>时间戳请求</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0</td>
+<td>时间戳应答</td>
+</tr>
+<tr>
+<td>17</td>
+<td>0</td>
+<td>地址掩码请求</td>
+</tr>
+<tr>
+<td>18</td>
+<td>0</td>
+<td>地址掩码应答</td>
+</tr>
+</tbody></table>
+<h2 id="4-4-传输层"><a href="#4-4-传输层" class="headerlink" title="4.4 传输层"></a>4.4 传输层</h2><h3 id="4-4-1-TCP"><a href="#4-4-1-TCP" class="headerlink" title="4.4.1 TCP"></a>4.4.1 TCP</h3><p>头部：20字节</p>
+<ol>
+<li><p>源端口：16bit</p>
+</li>
+<li><p>目的端口:16bit</p>
+</li>
+<li><p>序列号：32bit</p>
+</li>
+<li><p>确认号：32bit</p>
+</li>
+<li><p>偏移字段：4bit</p>
+</li>
+<li><p>保留字段：4bit</p>
+<blockquote>
+<p>全为0</p>
+</blockquote>
+</li>
+<li><p>标志位字段</p>
+<blockquote>
+<ul>
+<li>CWR（Congestion Window Reduce）：拥塞窗口减少标志，用来表明它接收到了设置 ECE 标志的 TCP 包。并且，发送方收到消息之后，通过减小发送窗口的大小来降低发送速率。</li>
+<li>ECE（ECN Echo）：用来在 TCP 三次握手时表明一个 TCP 端是具备 ECN 功能的。在数据传输过程中，它也用来表明接收到的 TCP 包的 IP 头部的 ECN 被设置为 11，即网络线路拥堵。</li>
+<li>URG（Urgent）：表示本报文段中发送的数据是否包含紧急数据。URG=1 时表示有紧急数据。当 URG=1 时，后面的紧急指针字段才有效。</li>
+<li>ACK：表示前面的确认号字段是否有效。ACK=1 时表示有效。只有当 ACK=1 时，前面的确认号字段才有效。TCP 规定，连接建立后，ACK 必须为 1。</li>
+<li>PSH（Push）：告诉对方收到该报文段后是否立即把数据推送给上层。如果值为 1，表示应当立即把数据提交给上层，而不是缓存起来。</li>
+<li>RST：表示是否重置连接。如果 RST=1，说明 TCP 连接出现了严重错误（如主机崩溃），必须释放连接，然后再重新建立连接。</li>
+<li>SYN：在建立连接时使用，用来同步序号。当 SYN=1，ACK=0 时，表示这是一个请求建立连接的报文段；当 SYN=1，ACK=1 时，表示对方同意建立连接。SYN=1 时，说明这是一个请求建立连接或同意建立连接的报文。只有在前两次握手中 SYN 才为 1。</li>
+<li>FIN：标记数据是否发送完毕。如果 FIN=1，表示数据已经发送完成，可以释放连接。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>窗口大小：16bit</p>
+</li>
+<li><p>TCP校验和：16bit</p>
+</li>
+<li><p>紧急指针：16bit</p>
+</li>
+<li><p>可选字段：必须为32bits整数倍</p>
+</li>
+</ol>
+<h3 id="4-4-2-UDP"><a href="#4-4-2-UDP" class="headerlink" title="4.4.2 UDP"></a>4.4.2 UDP</h3><p>全称：User Datagram Protocol (用户数据报协议)</p>
+<p>首部：8字节</p>
+<ol>
+<li>源端口：16bit</li>
+<li>目的端口：16bit</li>
+<li>长度：16bit</li>
+<li>校验值：16bit</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Fons Hui</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://jaheel.github.io/blog/2020/10/19/TCP_IP/">http://jaheel.github.io/blog/2020/10/19/TCP_IP/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/jaheel.github.io/tags/TCP/">TCP</a><a class="post-meta__tags" href="/jaheel.github.io/tags/netwox/">netwox</a><a class="post-meta__tags" href="/jaheel.github.io/tags/wireshark/">wireshark</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/jaheel.github.io/2020/10/19/VS%20Code%20%E5%BF%AB%E6%8D%B7%E9%94%AE/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/jaheel.github.io/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">VS Code 快捷键</div></div></a></div><div class="next-post pull-right"><a href="/jaheel.github.io/2020/10/19/Spider_Python_Note/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/jaheel.github.io/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Spider_Python Note</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/jaheel.github.io/img/avatar.jpg" onerror="this.onerror=null;this.src='/jaheel.github.io/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Fons Hui</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/jaheel.github.io/archives/"><div class="headline">Articles</div><div class="length-num">39</div></a></div><div class="card-info-data-item is-center"><a href="/jaheel.github.io/tags/"><div class="headline">Tags</div><div class="length-num">37</div></a></div><div class="card-info-data-item is-center"><a href="/jaheel.github.io/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/jaheel"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jaheel" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xufanxin86@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.zhihu.com/people/xu-fan-xin-28" target="_blank" title="Zhihu"><i class="fab fa-zhihu"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text">1 硬件组成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E7%BD%91%E5%8D%A1"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 网卡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E6%9C%89%E7%BA%BF%E7%BD%91%E5%8D%A1"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1 有线网卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 无线网卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E8%93%9D%E7%89%99%E9%80%82%E9%85%8D%E5%99%A8"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3 蓝牙适配器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%BD%91%E7%BB%9C%E7%94%B5%E7%BC%86"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 网络电缆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E5%8F%8C%E7%BB%9E%E7%BA%BF"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.2.1 双绞线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E5%85%89%E7%BA%A4"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2.2 光纤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-%E7%94%B5%E8%AF%9D%E7%BA%BF"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.2.3 电话线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 网络设备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 交换机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 路由器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-%E8%B0%83%E5%88%B6%E8%A7%A3%E8%B0%83%E5%99%A8"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 调制解调器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.</span> <span class="toc-text">2 网络协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-TCP-IP"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 TCP&#x2F;IP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-OSI"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 OSI</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7"><span class="toc-number">3.</span> <span class="toc-text">3 学习工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-netwox"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 netwox</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-wireshark"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 wireshark</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%B1%82%E6%AC%A1%E5%8D%8F%E8%AE%AE"><span class="toc-number">4.</span> <span class="toc-text">4 层次协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E7%89%A9%E7%90%86%E5%B1%82"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 物理层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-MAC%E5%B1%82"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 MAC层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-IP%E5%B1%82"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 IP层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-1-IP%E5%8D%8F%E8%AE%AE"><span class="toc-number">4.3.1.</span> <span class="toc-text">4.3.1 IP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-2-ICMP%E5%8D%8F%E8%AE%AE"><span class="toc-number">4.3.2.</span> <span class="toc-text">4.3.2 ICMP协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 传输层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-1-TCP"><span class="toc-number">4.4.1.</span> <span class="toc-text">4.4.1 TCP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-2-UDP"><span class="toc-number">4.4.2.</span> <span class="toc-text">4.4.2 UDP</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/jaheel.github.io/2020/10/19/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" title="集成学习"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/jaheel.github.io/img/404.jpg'" alt="集成学习"/></a><div class="content"><a class="title" href="/jaheel.github.io/2020/10/19/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" title="集成学习">集成学习</a><time datetime="2020-10-19T13:28:26.540Z" title="Created 2020-10-19 21:28:26">2020-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/jaheel.github.io/2020/10/19/%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/" title="降维与度量学习"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/jaheel.github.io/img/404.jpg'" alt="降维与度量学习"/></a><div class="content"><a class="title" href="/jaheel.github.io/2020/10/19/%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/" title="降维与度量学习">降维与度量学习</a><time datetime="2020-10-19T13:28:26.539Z" title="Created 2020-10-19 21:28:26">2020-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/jaheel.github.io/2020/10/19/%E9%98%9F%E5%88%97%EF%BC%88%E9%93%BE%E5%BC%8F%EF%BC%89/" title="队列（链式）"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/jaheel.github.io/img/404.jpg'" alt="队列（链式）"/></a><div class="content"><a class="title" href="/jaheel.github.io/2020/10/19/%E9%98%9F%E5%88%97%EF%BC%88%E9%93%BE%E5%BC%8F%EF%BC%89/" title="队列（链式）">队列（链式）</a><time datetime="2020-10-19T13:28:26.536Z" title="Created 2020-10-19 21:28:26">2020-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/jaheel.github.io/2020/10/19/%E9%98%9F%E5%88%97(%E5%BE%AA%E7%8E%AF)/" title="队列(循环)"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/jaheel.github.io/img/404.jpg'" alt="队列(循环)"/></a><div class="content"><a class="title" href="/jaheel.github.io/2020/10/19/%E9%98%9F%E5%88%97(%E5%BE%AA%E7%8E%AF)/" title="队列(循环)">队列(循环)</a><time datetime="2020-10-19T13:28:26.534Z" title="Created 2020-10-19 21:28:26">2020-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/jaheel.github.io/2020/10/19/%E8%AE%A1%E7%AE%97%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA/" title="计算学习理论"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/jaheel.github.io/img/404.jpg'" alt="计算学习理论"/></a><div class="content"><a class="title" href="/jaheel.github.io/2020/10/19/%E8%AE%A1%E7%AE%97%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA/" title="计算学习理论">计算学习理论</a><time datetime="2020-10-19T13:28:26.532Z" title="Created 2020-10-19 21:28:26">2020-10-19</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Fons Hui</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/jaheel.github.io/js/utils.js"></script><script src="/jaheel.github.io/js/main.js"></script><script src="/jaheel.github.io/js/search/local-search.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
