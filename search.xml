@@ -675,93 +675,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/jaheel.github.io/2020/10/19/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="OpenCV学习笔记"><a href="#OpenCV学习笔记" class="headerlink" title="OpenCV学习笔记"></a>OpenCV学习笔记</h1><h2 id="1-环境配置"><a href="#1-环境配置" class="headerlink" title="1 环境配置"></a>1 环境配置</h2><p>Python3.8.1</p>
-<p>安装opencv-python</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opencv-python</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="1-1-测试"><a href="#1-1-测试" class="headerlink" title="1.1 测试"></a>1.1 测试</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"> </span><br><span class="line">image = cv2.imread(<span class="string">&quot;1.jpg&quot;</span>, <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">&quot;image&quot;</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)//使画面停留，避免闪退</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-模块"><a href="#2-模块" class="headerlink" title="2 模块"></a>2 模块</h2><table>
-<thead>
-<tr>
-<th>模块</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Core</td>
-<td>该模块包含 OpenCV 库的基础结构以及基本操作。</td>
-</tr>
-<tr>
-<td>Improc</td>
-<td>图像处理模块包含基本的图像转换，包括滤波以及类似的卷积操作。</td>
-</tr>
-<tr>
-<td>Highgui</td>
-<td>在 OpenCV 3.0中，分割为 imcodecs、videoio 以及 highgui 三部分。  这个模块包含可以用来显示图像或者简单的输入的用户交互函数。这可以看作是一个非常轻量级的 Windows UI 工具包。</td>
-</tr>
-<tr>
-<td>Video</td>
-<td>该模块包含读取和写视频流的函数。</td>
-</tr>
-<tr>
-<td>Calib3d</td>
-<td>这个模块包括校准单个、双目以及多个相机的算法实现。</td>
-</tr>
-<tr>
-<td>Feature2d</td>
-<td>这个模块包含用于检测、描述以及匹配特征点的算法。</td>
-</tr>
-<tr>
-<td>Objdectect</td>
-<td>这个模块包含检测特定目标，比如人脸或者行人的算法。也可以训练检测器并用来检测其他物体。</td>
-</tr>
-<tr>
-<td>Ml</td>
-<td>机器学习模块本身是一个非常完备的模块，包含大量的机器学习算法实现并且这些算法都能和 OpenCV 的数据类型自然交互。</td>
-</tr>
-<tr>
-<td>Flann</td>
-<td>Flann 的意思是“快速最邻近库”。这个库包含一些你也许不会直接使用的方法，但是其他模块中的函数会调用它在数据集中进行最邻近搜索。</td>
-</tr>
-<tr>
-<td>GPU</td>
-<td>在 OpenCV 中被分割为多个 cuda* 模块。  GPU 模块主要是函数在 CUDA GPU 上的优化实现，此外，还有一些仅用于 GPU 的功 能。其中一些函数能够返回很好的结果，但是需要足够好的计算资源，如果硬件没有GPU，则不会有什么提升。</td>
-</tr>
-<tr>
-<td>Photo</td>
-<td>这是一个相当新的模块，包含计算摄影学的一些函数工具。</td>
-</tr>
-<tr>
-<td>Stitching</td>
-<td>本模块是一个精巧的图像拼接流程实现。这是库中的新功能，但是，就像 Photo 模块一样，这个领域未来预计有很大的增长。</td>
-</tr>
-<tr>
-<td>Nonfree</td>
-<td>在 OpenCV 3.0 中，被移到 opencv_contrib/xfeatures2d。  OpenCV 包含一些受到专利保护的或者受到使用限制的（比如 SIFT 算法）算法。这些算法被隔离到它们自己的模块中，以表明你需要做一些特殊的工作，才可以在商业产品中使用它们。</td>
-</tr>
-<tr>
-<td>Contrib</td>
-<td>在 OpenCV 3.0 中，融合进了 opencv_contrib。  这个模块包含一些新的、还没有被集成进 OpenCV 库的东西。</td>
-</tr>
-<tr>
-<td>Legacy</td>
-<td>在 OpenCV 3.0 中，被取消。  这个模块包含一些老的尚未被完全取消的东西。</td>
-</tr>
-<tr>
-<td>ocl</td>
-<td>在OpenCV 3.0 中，被取消，取而代之的是 T-API。  这是一个较新的模块，可以认为它和 GPU 模块相似，它实现了开放并行编程的 Khronos OpenCL 标准。虽然现在模块的特性比 GPU 模块少很多，但 ocl 模块的目标是提供可以运行在任何 GPU 或者是其他可以搭载 Khronos 的并行设备。这与 GPU 模 块形成了鲜明的对比，后者使用 Nividia CUDA 工具包进行开发，因此只能在 Nividia GPU 设备上工作。</td>
-</tr>
-</tbody></table>
-]]></content>
-  </entry>
-  <entry>
     <title>Python_OS库</title>
     <url>/jaheel.github.io/2020/10/19/Python_OS_method/</url>
     <content><![CDATA[<h2 id="Python-os"><a href="#Python-os" class="headerlink" title="Python_os"></a>Python_os</h2><table>
@@ -941,6 +854,93 @@
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/jaheel.github.io/2020/10/19/OpenCV%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="OpenCV学习笔记"><a href="#OpenCV学习笔记" class="headerlink" title="OpenCV学习笔记"></a>OpenCV学习笔记</h1><h2 id="1-环境配置"><a href="#1-环境配置" class="headerlink" title="1 环境配置"></a>1 环境配置</h2><p>Python3.8.1</p>
+<p>安装opencv-python</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opencv-python</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="1-1-测试"><a href="#1-1-测试" class="headerlink" title="1.1 测试"></a>1.1 测试</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"> </span><br><span class="line">image = cv2.imread(<span class="string">&quot;1.jpg&quot;</span>, <span class="number">0</span>)</span><br><span class="line">cv2.imshow(<span class="string">&quot;image&quot;</span>, image)</span><br><span class="line">cv2.waitKey(<span class="number">0</span>)//使画面停留，避免闪退</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-模块"><a href="#2-模块" class="headerlink" title="2 模块"></a>2 模块</h2><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Core</td>
+<td>该模块包含 OpenCV 库的基础结构以及基本操作。</td>
+</tr>
+<tr>
+<td>Improc</td>
+<td>图像处理模块包含基本的图像转换，包括滤波以及类似的卷积操作。</td>
+</tr>
+<tr>
+<td>Highgui</td>
+<td>在 OpenCV 3.0中，分割为 imcodecs、videoio 以及 highgui 三部分。  这个模块包含可以用来显示图像或者简单的输入的用户交互函数。这可以看作是一个非常轻量级的 Windows UI 工具包。</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>该模块包含读取和写视频流的函数。</td>
+</tr>
+<tr>
+<td>Calib3d</td>
+<td>这个模块包括校准单个、双目以及多个相机的算法实现。</td>
+</tr>
+<tr>
+<td>Feature2d</td>
+<td>这个模块包含用于检测、描述以及匹配特征点的算法。</td>
+</tr>
+<tr>
+<td>Objdectect</td>
+<td>这个模块包含检测特定目标，比如人脸或者行人的算法。也可以训练检测器并用来检测其他物体。</td>
+</tr>
+<tr>
+<td>Ml</td>
+<td>机器学习模块本身是一个非常完备的模块，包含大量的机器学习算法实现并且这些算法都能和 OpenCV 的数据类型自然交互。</td>
+</tr>
+<tr>
+<td>Flann</td>
+<td>Flann 的意思是“快速最邻近库”。这个库包含一些你也许不会直接使用的方法，但是其他模块中的函数会调用它在数据集中进行最邻近搜索。</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>在 OpenCV 中被分割为多个 cuda* 模块。  GPU 模块主要是函数在 CUDA GPU 上的优化实现，此外，还有一些仅用于 GPU 的功 能。其中一些函数能够返回很好的结果，但是需要足够好的计算资源，如果硬件没有GPU，则不会有什么提升。</td>
+</tr>
+<tr>
+<td>Photo</td>
+<td>这是一个相当新的模块，包含计算摄影学的一些函数工具。</td>
+</tr>
+<tr>
+<td>Stitching</td>
+<td>本模块是一个精巧的图像拼接流程实现。这是库中的新功能，但是，就像 Photo 模块一样，这个领域未来预计有很大的增长。</td>
+</tr>
+<tr>
+<td>Nonfree</td>
+<td>在 OpenCV 3.0 中，被移到 opencv_contrib/xfeatures2d。  OpenCV 包含一些受到专利保护的或者受到使用限制的（比如 SIFT 算法）算法。这些算法被隔离到它们自己的模块中，以表明你需要做一些特殊的工作，才可以在商业产品中使用它们。</td>
+</tr>
+<tr>
+<td>Contrib</td>
+<td>在 OpenCV 3.0 中，融合进了 opencv_contrib。  这个模块包含一些新的、还没有被集成进 OpenCV 库的东西。</td>
+</tr>
+<tr>
+<td>Legacy</td>
+<td>在 OpenCV 3.0 中，被取消。  这个模块包含一些老的尚未被完全取消的东西。</td>
+</tr>
+<tr>
+<td>ocl</td>
+<td>在OpenCV 3.0 中，被取消，取而代之的是 T-API。  这是一个较新的模块，可以认为它和 GPU 模块相似，它实现了开放并行编程的 Khronos OpenCL 标准。虽然现在模块的特性比 GPU 模块少很多，但 ocl 模块的目标是提供可以运行在任何 GPU 或者是其他可以搭载 Khronos 的并行设备。这与 GPU 模 块形成了鲜明的对比，后者使用 Nividia CUDA 工具包进行开发，因此只能在 Nividia GPU 设备上工作。</td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
+  <entry>
     <title>Rider配置PlantUML</title>
     <url>/jaheel.github.io/2020/10/19/Rider%E9%85%8D%E7%BD%AEPlantUML/</url>
     <content><![CDATA[<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>插件：</p>
@@ -1032,6 +1032,302 @@
       <tags>
         <tag>Python</tag>
         <tag>Spider</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VS Code 快捷键</title>
+    <url>/jaheel.github.io/2020/10/19/VS%20Code%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h2 id="快捷键组合方式"><a href="#快捷键组合方式" class="headerlink" title="快捷键组合方式"></a>快捷键组合方式</h2><ol>
+<li>Ctrl + Shift + ?</li>
+<li>Ctrl+C Ctrl+V</li>
+<li>Ctrl+Click </li>
+</ol>
+<h2 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+Shift+P</td>
+<td>展示全局命令面板</td>
+</tr>
+<tr>
+<td>Ctrl+P</td>
+<td>快速打开最近打开的文件</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+N</td>
+<td>打开新的编辑器窗口</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+W</td>
+<td>关闭编辑器</td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+<h2 id="基础编辑"><a href="#基础编辑" class="headerlink" title="基础编辑"></a>基础编辑</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+X</td>
+<td>剪切</td>
+</tr>
+<tr>
+<td>Ctrl+C</td>
+<td>复制</td>
+</tr>
+<tr>
+<td>Alt+up/down</td>
+<td>移动行上下</td>
+</tr>
+<tr>
+<td>Shift+Alt + up/down</td>
+<td>在当前行上下复制当前行</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + K</td>
+<td>删除行</td>
+</tr>
+<tr>
+<td>Ctrl + Enter</td>
+<td>在当前行下插入新的一行</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + Enter</td>
+<td>在当前行上插入新的一行</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + |</td>
+<td>匹配花括号的闭合处，跳转</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>光标跳转到行头</td>
+</tr>
+<tr>
+<td>End</td>
+<td>光标跳转到行尾</td>
+</tr>
+<tr>
+<td>Ctrl + Home</td>
+<td>跳转到页头</td>
+</tr>
+<tr>
+<td>Ctrl + End</td>
+<td>跳转到页尾</td>
+</tr>
+<tr>
+<td>Ctrl + up/down</td>
+<td>行视图上下偏移</td>
+</tr>
+<tr>
+<td>Alt + PgUp/PgDown</td>
+<td>屏视图上下偏移</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + [</td>
+<td>折叠区域代码</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + ]</td>
+<td>展开区域代码</td>
+</tr>
+<tr>
+<td>Ctrl + K + C</td>
+<td>添加行注释</td>
+</tr>
+<tr>
+<td>Ctrl + K + U</td>
+<td>删除行注释</td>
+</tr>
+<tr>
+<td>Ctrl + /</td>
+<td>添加关闭行注释</td>
+</tr>
+<tr>
+<td>Shift + Alt + A</td>
+<td>块区域注释</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + T</td>
+<td>列出所有符号</td>
+</tr>
+<tr>
+<td>Ctrl + G</td>
+<td>跳转行</td>
+</tr>
+<tr>
+<td>Ctrl + P</td>
+<td>跳转文件</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + O</td>
+<td>跳转到符号处</td>
+</tr>
+<tr>
+<td>F8</td>
+<td>跳转到下一个错误或者警告</td>
+</tr>
+<tr>
+<td>Shift + F8</td>
+<td>跳转到上一个错误或者警告</td>
+</tr>
+<tr>
+<td>Ctrl + Shift +Tab</td>
+<td>切换到最近打开的文件</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + M</td>
+<td>打开问题展示面板</td>
+</tr>
+<tr>
+<td>Alt + left/right</td>
+<td>向后、向前</td>
+</tr>
+<tr>
+<td>Ctrl + M</td>
+<td>进入用Tab来移动焦点</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="查询与替换"><a href="#查询与替换" class="headerlink" title="查询与替换"></a>查询与替换</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + F</td>
+<td>查询</td>
+</tr>
+<tr>
+<td>Ctrl + H</td>
+<td>替换</td>
+</tr>
+<tr>
+<td>F3 / Shift + F3</td>
+<td>查询下一个/上一个</td>
+</tr>
+<tr>
+<td>Alt + Enter</td>
+<td>选中所有出现在查询中的</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="语言操作"><a href="#语言操作" class="headerlink" title="语言操作"></a>语言操作</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F12</td>
+<td>跳转到定义处</td>
+</tr>
+<tr>
+<td>Alt + F12</td>
+<td>代码片段显示定义</td>
+</tr>
+<tr>
+<td>Shift + F12</td>
+<td>显示所有引用</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>重命名符号</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl + N</td>
+<td>新建文件</td>
+</tr>
+<tr>
+<td>Ctrl + O</td>
+<td>打开文件</td>
+</tr>
+<tr>
+<td>Ctrl + S</td>
+<td>保存文件</td>
+</tr>
+<tr>
+<td>Ctrl + Shift + S</td>
+<td>另存为</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>VS Code</category>
+      </categories>
+      <tags>
+        <tag>VS Code</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>babun常用命令</title>
+    <url>/jaheel.github.io/2020/10/19/babun%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pact install # 安装软件包</span><br><span class="line">pact remove # 删除指定的软件包</span><br><span class="line">pact update # 更新指定的软件包</span><br><span class="line">pact show # 显示已安装的软件包</span><br><span class="line">pact find # 搜索软件包</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>babun</category>
+      </categories>
+      <tags>
+        <tag>babun</tag>
+        <tag>bash</tag>
       </tags>
   </entry>
   <entry>
@@ -1476,288 +1772,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VS Code 快捷键</title>
-    <url>/jaheel.github.io/2020/10/19/VS%20Code%20%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h2 id="快捷键组合方式"><a href="#快捷键组合方式" class="headerlink" title="快捷键组合方式"></a>快捷键组合方式</h2><ol>
-<li>Ctrl + Shift + ?</li>
-<li>Ctrl+C Ctrl+V</li>
-<li>Ctrl+Click </li>
-</ol>
-<h2 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl+Shift+P</td>
-<td>展示全局命令面板</td>
-</tr>
-<tr>
-<td>Ctrl+P</td>
-<td>快速打开最近打开的文件</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+N</td>
-<td>打开新的编辑器窗口</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+W</td>
-<td>关闭编辑器</td>
-</tr>
-</tbody></table>
-<a id="more"></a>
-
-<h2 id="基础编辑"><a href="#基础编辑" class="headerlink" title="基础编辑"></a>基础编辑</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl+X</td>
-<td>剪切</td>
-</tr>
-<tr>
-<td>Ctrl+C</td>
-<td>复制</td>
-</tr>
-<tr>
-<td>Alt+up/down</td>
-<td>移动行上下</td>
-</tr>
-<tr>
-<td>Shift+Alt + up/down</td>
-<td>在当前行上下复制当前行</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + K</td>
-<td>删除行</td>
-</tr>
-<tr>
-<td>Ctrl + Enter</td>
-<td>在当前行下插入新的一行</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + Enter</td>
-<td>在当前行上插入新的一行</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + |</td>
-<td>匹配花括号的闭合处，跳转</td>
-</tr>
-<tr>
-<td>Home</td>
-<td>光标跳转到行头</td>
-</tr>
-<tr>
-<td>End</td>
-<td>光标跳转到行尾</td>
-</tr>
-<tr>
-<td>Ctrl + Home</td>
-<td>跳转到页头</td>
-</tr>
-<tr>
-<td>Ctrl + End</td>
-<td>跳转到页尾</td>
-</tr>
-<tr>
-<td>Ctrl + up/down</td>
-<td>行视图上下偏移</td>
-</tr>
-<tr>
-<td>Alt + PgUp/PgDown</td>
-<td>屏视图上下偏移</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + [</td>
-<td>折叠区域代码</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + ]</td>
-<td>展开区域代码</td>
-</tr>
-<tr>
-<td>Ctrl + K + C</td>
-<td>添加行注释</td>
-</tr>
-<tr>
-<td>Ctrl + K + U</td>
-<td>删除行注释</td>
-</tr>
-<tr>
-<td>Ctrl + /</td>
-<td>添加关闭行注释</td>
-</tr>
-<tr>
-<td>Shift + Alt + A</td>
-<td>块区域注释</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl + T</td>
-<td>列出所有符号</td>
-</tr>
-<tr>
-<td>Ctrl + G</td>
-<td>跳转行</td>
-</tr>
-<tr>
-<td>Ctrl + P</td>
-<td>跳转文件</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + O</td>
-<td>跳转到符号处</td>
-</tr>
-<tr>
-<td>F8</td>
-<td>跳转到下一个错误或者警告</td>
-</tr>
-<tr>
-<td>Shift + F8</td>
-<td>跳转到上一个错误或者警告</td>
-</tr>
-<tr>
-<td>Ctrl + Shift +Tab</td>
-<td>切换到最近打开的文件</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + M</td>
-<td>打开问题展示面板</td>
-</tr>
-<tr>
-<td>Alt + left/right</td>
-<td>向后、向前</td>
-</tr>
-<tr>
-<td>Ctrl + M</td>
-<td>进入用Tab来移动焦点</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="查询与替换"><a href="#查询与替换" class="headerlink" title="查询与替换"></a>查询与替换</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl + F</td>
-<td>查询</td>
-</tr>
-<tr>
-<td>Ctrl + H</td>
-<td>替换</td>
-</tr>
-<tr>
-<td>F3 / Shift + F3</td>
-<td>查询下一个/上一个</td>
-</tr>
-<tr>
-<td>Alt + Enter</td>
-<td>选中所有出现在查询中的</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="语言操作"><a href="#语言操作" class="headerlink" title="语言操作"></a>语言操作</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>F12</td>
-<td>跳转到定义处</td>
-</tr>
-<tr>
-<td>Alt + F12</td>
-<td>代码片段显示定义</td>
-</tr>
-<tr>
-<td>Shift + F12</td>
-<td>显示所有引用</td>
-</tr>
-<tr>
-<td>F2</td>
-<td>重命名符号</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Ctrl + N</td>
-<td>新建文件</td>
-</tr>
-<tr>
-<td>Ctrl + O</td>
-<td>打开文件</td>
-</tr>
-<tr>
-<td>Ctrl + S</td>
-<td>保存文件</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + S</td>
-<td>另存为</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>VS Code</category>
-      </categories>
-      <tags>
-        <tag>VS Code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>babun issues</title>
     <url>/jaheel.github.io/2020/02/10/babun-issues/</url>
     <content><![CDATA[<h2 id="1-download"><a href="#1-download" class="headerlink" title="1 download"></a>1 download</h2><p>网址：<a href="http://babun.github.io/">http://babun.github.io/</a></p>
@@ -1804,20 +1818,6 @@
       <tags>
         <tag>code</tag>
         <tag>babun</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>babun常用命令</title>
-    <url>/jaheel.github.io/2020/10/19/babun%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pact install # 安装软件包</span><br><span class="line">pact remove # 删除指定的软件包</span><br><span class="line">pact update # 更新指定的软件包</span><br><span class="line">pact show # 显示已安装的软件包</span><br><span class="line">pact find # 搜索软件包</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>babun</category>
-      </categories>
-      <tags>
-        <tag>babun</tag>
-        <tag>bash</tag>
       </tags>
   </entry>
   <entry>
@@ -1872,25 +1872,28 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo-op</title>
-    <url>/jaheel.github.io/2020/10/19/hexo-op/</url>
-    <content><![CDATA[<h1 id="hexo-op"><a href="#hexo-op" class="headerlink" title="hexo op"></a>hexo op</h1><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>hexo-博客迁移</title>
+    <url>/jaheel.github.io/2020/10/19/hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/</url>
+    <content><![CDATA[<h2 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h2><p>将原来电脑已经配置好并生成的Hexo目录拷贝到新电脑。</p>
+<p>只需拷贝以下目录:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">package.json</span><br><span class="line">scaffolds&#x2F;</span><br><span class="line">source&#x2F;</span><br><span class="line">themes&#x2F;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>放到同一目录下。如：hexo/</p>
+<h2 id="step-2"><a href="#step-2" class="headerlink" title="step 2"></a>step 2</h2><p>配置node.js</p>
+<p>参考：Hexo-建站</p>
+<h2 id="step-3"><a href="#step-3" class="headerlink" title="step 3"></a>step 3</h2><p>安装hexo</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<a id="more"></a>
+<h2 id="step-4"><a href="#step-4" class="headerlink" title="step 4"></a>step 4</h2><p>进入hexo/目录</p>
+<p>安装模块:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
 
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="step-5"><a href="#step-5" class="headerlink" title="step 5"></a>step 5</h2><p>部署</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>babun</category>
+        <category>hexo</category>
       </categories>
       <tags>
         <tag>bash</tag>
@@ -1973,28 +1976,25 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo-博客迁移</title>
-    <url>/jaheel.github.io/2020/10/19/hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/</url>
-    <content><![CDATA[<h2 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h2><p>将原来电脑已经配置好并生成的Hexo目录拷贝到新电脑。</p>
-<p>只需拷贝以下目录:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">package.json</span><br><span class="line">scaffolds&#x2F;</span><br><span class="line">source&#x2F;</span><br><span class="line">themes&#x2F;</span><br></pre></td></tr></table></figure>
+    <title>hexo-op</title>
+    <url>/jaheel.github.io/2020/10/19/hexo-op/</url>
+    <content><![CDATA[<h1 id="hexo-op"><a href="#hexo-op" class="headerlink" title="hexo op"></a>hexo op</h1><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>放到同一目录下。如：hexo/</p>
-<h2 id="step-2"><a href="#step-2" class="headerlink" title="step 2"></a>step 2</h2><p>配置node.js</p>
-<p>参考：Hexo-建站</p>
-<h2 id="step-3"><a href="#step-3" class="headerlink" title="step 3"></a>step 3</h2><p>安装hexo</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<h2 id="step-4"><a href="#step-4" class="headerlink" title="step 4"></a>step 4</h2><p>进入hexo/目录</p>
-<p>安装模块:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<a id="more"></a>
 
-<h2 id="step-5"><a href="#step-5" class="headerlink" title="step 5"></a>step 5</h2><p>部署</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>babun</category>
       </categories>
       <tags>
         <tag>bash</tag>
@@ -2156,15 +2156,18 @@
       </tags>
   </entry>
   <entry>
-    <title>有向图、无向图、有向网、无向网（邻接矩阵）</title>
-    <url>/jaheel.github.io/2020/10/19/%E5%9B%BE-(%E6%9C%89%E5%90%91%E3%80%81%E6%97%A0%E5%90%91)(%E5%9B%BE%E3%80%81%E7%BD%91)(%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5)/</url>
+    <title>图（Dijkstra算法）</title>
+    <url>/jaheel.github.io/2020/10/19/%E5%9B%BE%EF%BC%88Dijkstra%E7%AE%97%E6%B3%95%EF%BC%89/</url>
     <content><![CDATA[<p>教材：严版数据结构</p>
-<p>页码：P162</p>
-<p>算法： 7.1-7.2</p>
+<p>页码：P189</p>
+<p>实现：算法7.15</p>
+<p>IDE：VS2015</p>
 <p>代码如下：</p>
 <a id="more"></a>
 
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY INT_MAX <span class="comment">//最大值</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_VERTEX_NUM 20 <span class="comment">//最大顶点个数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VRType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="comment">//&#123;有向图，有向网，无向图，无向网&#125;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span>DG,DN,UDG,UDN&#125;GraphKind;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcCell</span> &#123;</span></span><br><span class="line">	VRType adj;<span class="comment">//VRType是顶点关系类型。对无权图，用1或0</span></span><br><span class="line">	<span class="comment">//表示相邻否；对带权图，则为权值类型</span></span><br><span class="line">	InfoType *info;<span class="comment">//该弧相关信息的指针</span></span><br><span class="line">&#125;ArcCell,AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	VertexType vexs[MAX_VERTEX_NUM];<span class="comment">//顶点向量</span></span><br><span class="line">	AdjMatrix arcs;<span class="comment">//邻接矩阵</span></span><br><span class="line">	<span class="keyword">int</span> vexnum, arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">	GraphKind kind;<span class="comment">//图的种类标志</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//在G中找到v对应的顶点位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateVex</span><span class="params">(MGraph G, <span class="keyword">char</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (G.vexs[i] == v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  算法7.2</span></span><br><span class="line"><span class="comment">  采用数组（邻接矩阵）表示法，构造无向网G</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Status <span class="title">CreateUDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	<span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">		<span class="comment">//置&lt;v1,v2&gt;的对称弧&lt;v2,v1&gt;</span></span><br><span class="line">		G.arcs[j][i].adj = G.arcs[i][j].adj;</span><br><span class="line">	 &#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">有向图的构造</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Status <span class="title">CreateDG</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = <span class="number">0</span>;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj:&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = <span class="number">1</span>;<span class="comment">//1代表可达，0代表不可达</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">无向图的构造</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Status <span class="title">CreateUDG</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = <span class="number">0</span>;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj:&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = <span class="number">1</span>;<span class="comment">//1代表可达，0代表不可达</span></span><br><span class="line">		G.arcs[j][i].adj = G.arcs[i][j].adj;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">算法7.1</span></span><br><span class="line"><span class="comment">采用数组（邻接矩阵）表示法，构造图G。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Status <span class="title">CreateGraph</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;请输入图的种类：0表示DG，1表示DN，2表示UDG，3表示UDN&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">	G.kind=(GraphKind)x;</span><br><span class="line">	<span class="keyword">switch</span> (G.kind)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> DG:</span><br><span class="line">		<span class="keyword">return</span> CreateDG(G);</span><br><span class="line">	<span class="keyword">case</span> DN:</span><br><span class="line">		<span class="keyword">return</span> CreateDN(G);</span><br><span class="line">	<span class="keyword">case</span> UDG:</span><br><span class="line">		<span class="keyword">return</span> CreateUDG(G);</span><br><span class="line">	<span class="keyword">case</span> UDN:<span class="keyword">return</span> CreateUDN(G);</span><br><span class="line">	<span class="keyword">default</span>:<span class="keyword">return</span> ERROR;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list</span><span class="params">(MGraph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出邻接矩阵：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[i] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j].adj == INFINITY)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; <span class="string">&quot;∞&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; G.arcs[i][j].adj;			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MGraph G;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (x)</span><br><span class="line">	&#123;</span><br><span class="line">		CreateGraph(G);</span><br><span class="line">		<span class="built_in">list</span>(G);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;是否继续(1、继续，0、退出)&quot;</span>;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY 32767 <span class="comment">//最大值</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_VERTEX_NUM 20 <span class="comment">//最大顶点个数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VRType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">bool</span>** PathMatrix;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//&#123;有向图，有向网，无向图，无向网&#125;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> &#123;</span> DG, DN, UDG, UDN &#125;GraphKind;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcCell</span> &#123;</span></span><br><span class="line">	VRType adj;<span class="comment">//VRType是顶点关系类型。对无权图，用1或0</span></span><br><span class="line">			   <span class="comment">//表示相邻否；对带权图，则为权值类型</span></span><br><span class="line">	InfoType *info;<span class="comment">//该弧相关信息的指针</span></span><br><span class="line">&#125;ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> ArcCell* ShortPathTable;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	VertexType vexs[MAX_VERTEX_NUM];<span class="comment">//顶点向量</span></span><br><span class="line">	AdjMatrix arcs;<span class="comment">//邻接矩阵</span></span><br><span class="line">	<span class="keyword">int</span> vexnum, arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">	GraphKind kind;<span class="comment">//图的种类标志</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//在G中找到v对应的顶点位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateVex</span><span class="params">(MGraph G, <span class="keyword">char</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (G.vexs[i] == v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list</span><span class="params">(MGraph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出邻接矩阵：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[i] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j].adj == INFINITY)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; <span class="string">&quot;∞&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; G.arcs[i][j].adj;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShortestPath_DIJ</span><span class="params">(MGraph G, <span class="keyword">int</span> v0, PathMatrix &amp;P, ShortPathTable &amp;D)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, v, w;</span><br><span class="line">	P = (<span class="keyword">bool</span> **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span> *)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">		P[i] = (<span class="keyword">bool</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*G.vexnum);</span><br><span class="line">	D = (ArcCell *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ArcCell)*G.vexnum);</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">bool</span> *<span class="keyword">final</span> = <span class="keyword">new</span> <span class="keyword">bool</span>[G.vexnum];</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">final</span>[v] = FALSE;</span><br><span class="line">		D[v] = G.arcs[v0][v];</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			P[v][w] = FALSE;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (D[v].adj &lt; INFINITY)</span><br><span class="line">		&#123;</span><br><span class="line">			P[v][v0] = TRUE;</span><br><span class="line">			P[v][v] = TRUE;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="comment">//for</span></span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> min;</span><br><span class="line">	<span class="comment">//初始化,v0顶点属于S集</span></span><br><span class="line">	D[v0].adj = <span class="number">0</span>; <span class="keyword">final</span>[v0] = TRUE;</span><br><span class="line">	<span class="comment">//开始主循环，每次求得v0到某个顶点的最短路径，并加v到S集</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		min = INFINITY;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//w顶点在V-S中</span></span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w])</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//w顶点离v0顶点更近</span></span><br><span class="line">				<span class="keyword">if</span> (D[w].adj &lt; min)</span><br><span class="line">				&#123;</span><br><span class="line">					v = w;</span><br><span class="line">					min = D[w].adj;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">final</span>[v] = TRUE;<span class="comment">//离v0顶点最近的v加入S集</span></span><br><span class="line">		<span class="comment">//更新当前最短路径和距离</span></span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//修改D[w]和P[w]</span></span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w] &amp;&amp; (min + G.arcs[v][w].adj &lt; D[w].adj))</span><br><span class="line">			&#123;</span><br><span class="line">				D[w].adj = min + G.arcs[v][w].adj;</span><br><span class="line">				P[w] = P[v];</span><br><span class="line">				P[w][w] = TRUE;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(i!=v0)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%3c  %3c  &quot;</span>,G.vexs[v0],G.vexs[i]);</span><br><span class="line">			<span class="keyword">if</span> (D[i].adj != INFINITY)</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%5d    &quot;</span>, D[i]);</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;(&quot;</span>;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (P[i][j])</span><br><span class="line">					<span class="built_in">cout</span> &lt;&lt; G.vexs[j];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;)&quot;</span>;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MGraph G;</span><br><span class="line">	<span class="keyword">int</span> v0;</span><br><span class="line">	PathMatrix P;</span><br><span class="line">	ShortPathTable D;</span><br><span class="line">	CreateDN(G);</span><br><span class="line">	<span class="built_in">list</span>(G);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入源点序号v0:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; v0;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出从源点&quot;</span> &lt;&lt; v0 &lt;&lt; <span class="string">&quot;到其余顶点的最短路径如下：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;始点 终点 路径长度 最短路径&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	ShortestPath_DIJ(G, v0, P, D);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2178,18 +2181,15 @@
       </tags>
   </entry>
   <entry>
-    <title>图（Dijkstra算法）</title>
-    <url>/jaheel.github.io/2020/10/19/%E5%9B%BE%EF%BC%88Dijkstra%E7%AE%97%E6%B3%95%EF%BC%89/</url>
+    <title>有向图、无向图、有向网、无向网（邻接矩阵）</title>
+    <url>/jaheel.github.io/2020/10/19/%E5%9B%BE-(%E6%9C%89%E5%90%91%E3%80%81%E6%97%A0%E5%90%91)(%E5%9B%BE%E3%80%81%E7%BD%91)(%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5)/</url>
     <content><![CDATA[<p>教材：严版数据结构</p>
-<p>页码：P189</p>
-<p>实现：算法7.15</p>
-<p>IDE：VS2015</p>
+<p>页码：P162</p>
+<p>算法： 7.1-7.2</p>
 <p>代码如下：</p>
 <a id="more"></a>
 
-
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY 32767 <span class="comment">//最大值</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_VERTEX_NUM 20 <span class="comment">//最大顶点个数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VRType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">bool</span>** PathMatrix;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//&#123;有向图，有向网，无向图，无向网&#125;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span> &#123;</span> DG, DN, UDG, UDN &#125;GraphKind;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcCell</span> &#123;</span></span><br><span class="line">	VRType adj;<span class="comment">//VRType是顶点关系类型。对无权图，用1或0</span></span><br><span class="line">			   <span class="comment">//表示相邻否；对带权图，则为权值类型</span></span><br><span class="line">	InfoType *info;<span class="comment">//该弧相关信息的指针</span></span><br><span class="line">&#125;ArcCell, AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> ArcCell* ShortPathTable;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	VertexType vexs[MAX_VERTEX_NUM];<span class="comment">//顶点向量</span></span><br><span class="line">	AdjMatrix arcs;<span class="comment">//邻接矩阵</span></span><br><span class="line">	<span class="keyword">int</span> vexnum, arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">	GraphKind kind;<span class="comment">//图的种类标志</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">//在G中找到v对应的顶点位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateVex</span><span class="params">(MGraph G, <span class="keyword">char</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (G.vexs[i] == v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list</span><span class="params">(MGraph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出邻接矩阵：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[i] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j].adj == INFINITY)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; <span class="string">&quot;∞&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; G.arcs[i][j].adj;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShortestPath_DIJ</span><span class="params">(MGraph G, <span class="keyword">int</span> v0, PathMatrix &amp;P, ShortPathTable &amp;D)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, v, w;</span><br><span class="line">	P = (<span class="keyword">bool</span> **)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span> *)*G.vexnum);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">		P[i] = (<span class="keyword">bool</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*G.vexnum);</span><br><span class="line">	D = (ArcCell *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ArcCell)*G.vexnum);</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">bool</span> *<span class="keyword">final</span> = <span class="keyword">new</span> <span class="keyword">bool</span>[G.vexnum];</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (v = <span class="number">0</span>; v &lt; G.vexnum; ++v)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">final</span>[v] = FALSE;</span><br><span class="line">		D[v] = G.arcs[v0][v];</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			P[v][w] = FALSE;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (D[v].adj &lt; INFINITY)</span><br><span class="line">		&#123;</span><br><span class="line">			P[v][v0] = TRUE;</span><br><span class="line">			P[v][v] = TRUE;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="comment">//for</span></span><br><span class="line"> </span><br><span class="line">	<span class="keyword">int</span> min;</span><br><span class="line">	<span class="comment">//初始化,v0顶点属于S集</span></span><br><span class="line">	D[v0].adj = <span class="number">0</span>; <span class="keyword">final</span>[v0] = TRUE;</span><br><span class="line">	<span class="comment">//开始主循环，每次求得v0到某个顶点的最短路径，并加v到S集</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		min = INFINITY;</span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//w顶点在V-S中</span></span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w])</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//w顶点离v0顶点更近</span></span><br><span class="line">				<span class="keyword">if</span> (D[w].adj &lt; min)</span><br><span class="line">				&#123;</span><br><span class="line">					v = w;</span><br><span class="line">					min = D[w].adj;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">final</span>[v] = TRUE;<span class="comment">//离v0顶点最近的v加入S集</span></span><br><span class="line">		<span class="comment">//更新当前最短路径和距离</span></span><br><span class="line">		<span class="keyword">for</span> (w = <span class="number">0</span>; w &lt; G.vexnum; ++w)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//修改D[w]和P[w]</span></span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">final</span>[w] &amp;&amp; (min + G.arcs[v][w].adj &lt; D[w].adj))</span><br><span class="line">			&#123;</span><br><span class="line">				D[w].adj = min + G.arcs[v][w].adj;</span><br><span class="line">				P[w] = P[v];</span><br><span class="line">				P[w][w] = TRUE;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(i!=v0)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%3c  %3c  &quot;</span>,G.vexs[v0],G.vexs[i]);</span><br><span class="line">			<span class="keyword">if</span> (D[i].adj != INFINITY)</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%5d    &quot;</span>, D[i]);</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;(&quot;</span>;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (P[i][j])</span><br><span class="line">					<span class="built_in">cout</span> &lt;&lt; G.vexs[j];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;)&quot;</span>;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MGraph G;</span><br><span class="line">	<span class="keyword">int</span> v0;</span><br><span class="line">	PathMatrix P;</span><br><span class="line">	ShortPathTable D;</span><br><span class="line">	CreateDN(G);</span><br><span class="line">	<span class="built_in">list</span>(G);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入源点序号v0:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; v0;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出从源点&quot;</span> &lt;&lt; v0 &lt;&lt; <span class="string">&quot;到其余顶点的最短路径如下：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;始点 终点 路径长度 最短路径&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	ShortestPath_DIJ(G, v0, P, D);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;limits.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY INT_MAX <span class="comment">//最大值</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_VERTEX_NUM 20 <span class="comment">//最大顶点个数</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VRType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="comment">//&#123;有向图，有向网，无向图，无向网&#125;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span>DG,DN,UDG,UDN&#125;GraphKind;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">ArcCell</span> &#123;</span></span><br><span class="line">	VRType adj;<span class="comment">//VRType是顶点关系类型。对无权图，用1或0</span></span><br><span class="line">	<span class="comment">//表示相邻否；对带权图，则为权值类型</span></span><br><span class="line">	InfoType *info;<span class="comment">//该弧相关信息的指针</span></span><br><span class="line">&#125;ArcCell,AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> VertexType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	VertexType vexs[MAX_VERTEX_NUM];<span class="comment">//顶点向量</span></span><br><span class="line">	AdjMatrix arcs;<span class="comment">//邻接矩阵</span></span><br><span class="line">	<span class="keyword">int</span> vexnum, arcnum;<span class="comment">//图的当前顶点数和弧数</span></span><br><span class="line">	GraphKind kind;<span class="comment">//图的种类标志</span></span><br><span class="line">&#125;MGraph;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//在G中找到v对应的顶点位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateVex</span><span class="params">(MGraph G, <span class="keyword">char</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (G.vexs[i] == v)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  算法7.2</span></span><br><span class="line"><span class="comment">  采用数组（邻接矩阵）表示法，构造无向网G</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Status <span class="title">CreateUDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	<span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">		<span class="comment">//置&lt;v1,v2&gt;的对称弧&lt;v2,v1&gt;</span></span><br><span class="line">		G.arcs[j][i].adj = G.arcs[i][j].adj;</span><br><span class="line">	 &#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateDN</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = INFINITY;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj和权值w(int):&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="comment">//输入一条边依附的顶点及权值</span></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = w;<span class="comment">//弧&lt;v1,v2&gt;的权值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">有向图的构造</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Status <span class="title">CreateDG</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = <span class="number">0</span>;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj:&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = <span class="number">1</span>;<span class="comment">//1代表可达，0代表不可达</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">无向图的构造</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Status <span class="title">CreateUDG</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j, k, w;</span><br><span class="line">	VertexType v1, v2;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点数G.vexnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.vexnum;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入边数G.arcnum:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; G.arcnum;</span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顶点G.vexs[&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot;]&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; G.vexs[i];</span><br><span class="line">		getchar();</span><br><span class="line">	&#125;<span class="comment">//构造顶点向量</span></span><br><span class="line"> </span><br><span class="line">	 <span class="comment">//初始化邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			G.arcs[i][j].adj = <span class="number">0</span>;</span><br><span class="line">			G.arcs[i][j].info = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//构造邻接矩阵</span></span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; G.arcnum; ++k)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入第&quot;</span> &lt;&lt; k + <span class="number">1</span> &lt;&lt; <span class="string">&quot;条边vi、vj:&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v1;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; v2;</span><br><span class="line">		getchar();</span><br><span class="line">		<span class="comment">//确定v1和v2在G中的位置</span></span><br><span class="line">		i = LocateVex(G, v1);</span><br><span class="line">		j = LocateVex(G, v2);</span><br><span class="line">		G.arcs[i][j].adj = <span class="number">1</span>;<span class="comment">//1代表可达，0代表不可达</span></span><br><span class="line">		G.arcs[j][i].adj = G.arcs[i][j].adj;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">算法7.1</span></span><br><span class="line"><span class="comment">采用数组（邻接矩阵）表示法，构造图G。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">Status <span class="title">CreateGraph</span><span class="params">(MGraph &amp;G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;请输入图的种类：0表示DG，1表示DN，2表示UDG，3表示UDN&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">	G.kind=(GraphKind)x;</span><br><span class="line">	<span class="keyword">switch</span> (G.kind)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> DG:</span><br><span class="line">		<span class="keyword">return</span> CreateDG(G);</span><br><span class="line">	<span class="keyword">case</span> DN:</span><br><span class="line">		<span class="keyword">return</span> CreateDN(G);</span><br><span class="line">	<span class="keyword">case</span> UDG:</span><br><span class="line">		<span class="keyword">return</span> CreateUDG(G);</span><br><span class="line">	<span class="keyword">case</span> UDN:<span class="keyword">return</span> CreateUDN(G);</span><br><span class="line">	<span class="keyword">default</span>:<span class="keyword">return</span> ERROR;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">list</span><span class="params">(MGraph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出邻接矩阵：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; G.vexnum; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; G.vexs[i] &lt;&lt; <span class="string">&quot;----&quot;</span>;</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; G.vexnum; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (G.arcs[i][j].adj == INFINITY)</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; <span class="string">&quot;∞&quot;</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; setw(<span class="number">4</span>) &lt;&lt; G.arcs[i][j].adj;			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	MGraph G;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (x)</span><br><span class="line">	&#123;</span><br><span class="line">		CreateGraph(G);</span><br><span class="line">		<span class="built_in">list</span>(G);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;是否继续(1、继续，0、退出)&quot;</span>;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2225,28 +2225,6 @@
       </tags>
   </entry>
   <entry>
-    <title>排序（快速排序）</title>
-    <url>/jaheel.github.io/2020/10/19/%E6%8E%92%E5%BA%8F%EF%BC%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%EF%BC%89/</url>
-    <content><![CDATA[<p>教材：严版数据结构</p>
-<p>页码：P272-276</p>
-<p>实现：算法10.6-10.8</p>
-<p>代码如下：</p>
-<a id="more"></a>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 20</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LT(a,b) (a&lt;b)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EQ(a,b) (a==b)</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> KeyType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	KeyType key;<span class="comment">//关键字项</span></span><br><span class="line">	InfoType otherinfo;<span class="comment">//其他数据项</span></span><br><span class="line">&#125;RedType;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	RedType r[MAXSIZE + <span class="number">1</span>];<span class="comment">//r[0]闲置或用作哨兵单位</span></span><br><span class="line">	<span class="keyword">int</span> length;<span class="comment">//顺序表长度</span></span><br><span class="line">&#125;SqList;<span class="comment">//顺序表类型</span></span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">InitList</span><span class="params">(SqList &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//构造一个空的顺序表L</span></span><br><span class="line">	L.length = <span class="number">0</span>;<span class="comment">//空表长度为0</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建n个元素的顺序表</span></span><br><span class="line"><span class="function">Status <span class="title">CreateList</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入&quot;</span> &lt;&lt; n &lt;&lt; <span class="string">&quot;个元素&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; L.r[i].key;</span><br><span class="line">		++L.length;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (L.length == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> ERROR;<span class="comment">//创建失败</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出顺序表</span></span><br><span class="line"><span class="function">Status <span class="title">DispList</span><span class="params">(SqList &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">if</span> (L.length == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= L.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; L.r[i].key &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//找到位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Partition</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	L.r[<span class="number">0</span>] = L.r[low];</span><br><span class="line">	<span class="keyword">int</span> pivotkey = L.r[low].key;</span><br><span class="line">	<span class="keyword">while</span> (low &lt; high)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span> (low &lt; high&amp;&amp;L.r[high].key &gt;= pivotkey)</span><br><span class="line">			--high;</span><br><span class="line">		L.r[low] = L.r[high];</span><br><span class="line">		<span class="keyword">while</span> (low &lt; high&amp;&amp;L.r[low].key &lt;= pivotkey)</span><br><span class="line">			++low;</span><br><span class="line">		L.r[high] = L.r[low];</span><br><span class="line">	&#125;</span><br><span class="line">	L.r[low] = L.r[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">return</span> low;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//递归排序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QSort</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (low &lt; high)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> pivotloc = Partition(L, low, high);</span><br><span class="line">		QSort(L, low, pivotloc - <span class="number">1</span>);<span class="comment">//对底子表递归排序</span></span><br><span class="line">		QSort(L, pivotloc + <span class="number">1</span>, high);<span class="comment">//对高子表递归排序</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(SqList &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	QSort(L, <span class="number">1</span>, L.length);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SqList L;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;初始化顺序表，&quot;</span>;</span><br><span class="line">	InitList(L);</span><br><span class="line">	<span class="keyword">if</span> (L.length == <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;顺序表为空！\n&quot;</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顺序表的元素个数:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	CreateList(L, n);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出&quot;</span> &lt;&lt; n &lt;&lt; <span class="string">&quot;个元素的顺序表如下:&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	DispList(L);</span><br><span class="line">	QuickSort(L);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;快速排序结果如下：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	DispList(L);</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-        <tag>data structure</tag>
-        <tag>Algorithm</tag>
-        <tag>Sort</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>图（邻接表）（BFS、DFS）</title>
     <url>/jaheel.github.io/2020/10/19/%E5%9B%BE%EF%BC%88%E9%82%BB%E6%8E%A5%E8%A1%A8%EF%BC%89%EF%BC%88BFS%E3%80%81DFS%EF%BC%89/</url>
     <content><![CDATA[<p>代码如下（附解析）：</p>
@@ -2274,6 +2252,28 @@
 <a id="more"></a>
 
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">HeapAdjust</span><span class="params">(HeapType &amp;H, <span class="keyword">int</span> s, <span class="keyword">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	RedType rc = H.r[s];</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line">	<span class="keyword">for</span> (j = <span class="number">2</span> * s; j &lt;= m; j *= <span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (j &lt; m&amp;&lt;(H.r[j].key, H.r[j + <span class="number">1</span>].key))</span><br><span class="line">			++j;</span><br><span class="line"> </span><br><span class="line">		<span class="keyword">if</span> (!LT(rc.key, H.r[j].key))</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		H.r[s] = H.r[j];</span><br><span class="line">		s = j;</span><br><span class="line">	&#125;</span><br><span class="line">	H.r[s] = rc;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//对顺序表H进行堆排序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">HeapSort</span><span class="params">(HeapType &amp;H)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="comment">//建立最大堆</span></span><br><span class="line">	<span class="keyword">for</span> (i = H.length / <span class="number">2</span>; i &gt;=<span class="number">1</span>; --i)</span><br><span class="line">		HeapAdjust(H, i, H.length);</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (i = H.length; i &gt;=<span class="number">2</span>; --i)</span><br><span class="line">	&#123;</span><br><span class="line">		RedType temp = H.r[<span class="number">1</span>];</span><br><span class="line">		H.r[<span class="number">1</span>] = H.r[i];</span><br><span class="line">		H.r[i] = temp;</span><br><span class="line"> </span><br><span class="line">		HeapAdjust(H, <span class="number">1</span>, i - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>data structure</tag>
+        <tag>Algorithm</tag>
+        <tag>Sort</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>排序（快速排序）</title>
+    <url>/jaheel.github.io/2020/10/19/%E6%8E%92%E5%BA%8F%EF%BC%88%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%EF%BC%89/</url>
+    <content><![CDATA[<p>教材：严版数据结构</p>
+<p>页码：P272-276</p>
+<p>实现：算法10.6-10.8</p>
+<p>代码如下：</p>
+<a id="more"></a>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 20</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LT(a,b) (a&lt;b)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EQ(a,b) (a==b)</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> KeyType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> InfoType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	KeyType key;<span class="comment">//关键字项</span></span><br><span class="line">	InfoType otherinfo;<span class="comment">//其他数据项</span></span><br><span class="line">&#125;RedType;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	RedType r[MAXSIZE + <span class="number">1</span>];<span class="comment">//r[0]闲置或用作哨兵单位</span></span><br><span class="line">	<span class="keyword">int</span> length;<span class="comment">//顺序表长度</span></span><br><span class="line">&#125;SqList;<span class="comment">//顺序表类型</span></span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">InitList</span><span class="params">(SqList &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//构造一个空的顺序表L</span></span><br><span class="line">	L.length = <span class="number">0</span>;<span class="comment">//空表长度为0</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建n个元素的顺序表</span></span><br><span class="line"><span class="function">Status <span class="title">CreateList</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入&quot;</span> &lt;&lt; n &lt;&lt; <span class="string">&quot;个元素&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; L.r[i].key;</span><br><span class="line">		++L.length;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (L.length == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> ERROR;<span class="comment">//创建失败</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出顺序表</span></span><br><span class="line"><span class="function">Status <span class="title">DispList</span><span class="params">(SqList &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">if</span> (L.length == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= L.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; L.r[i].key &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//找到位置</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Partition</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	L.r[<span class="number">0</span>] = L.r[low];</span><br><span class="line">	<span class="keyword">int</span> pivotkey = L.r[low].key;</span><br><span class="line">	<span class="keyword">while</span> (low &lt; high)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span> (low &lt; high&amp;&amp;L.r[high].key &gt;= pivotkey)</span><br><span class="line">			--high;</span><br><span class="line">		L.r[low] = L.r[high];</span><br><span class="line">		<span class="keyword">while</span> (low &lt; high&amp;&amp;L.r[low].key &lt;= pivotkey)</span><br><span class="line">			++low;</span><br><span class="line">		L.r[high] = L.r[low];</span><br><span class="line">	&#125;</span><br><span class="line">	L.r[low] = L.r[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">return</span> low;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//递归排序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QSort</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (low &lt; high)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> pivotloc = Partition(L, low, high);</span><br><span class="line">		QSort(L, low, pivotloc - <span class="number">1</span>);<span class="comment">//对底子表递归排序</span></span><br><span class="line">		QSort(L, pivotloc + <span class="number">1</span>, high);<span class="comment">//对高子表递归排序</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(SqList &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	QSort(L, <span class="number">1</span>, L.length);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SqList L;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;初始化顺序表，&quot;</span>;</span><br><span class="line">	InitList(L);</span><br><span class="line">	<span class="keyword">if</span> (L.length == <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;顺序表为空！\n&quot;</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输入顺序表的元素个数:&quot;</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	CreateList(L, n);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;输出&quot;</span> &lt;&lt; n &lt;&lt; <span class="string">&quot;个元素的顺序表如下:&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	DispList(L);</span><br><span class="line">	QuickSort(L);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;快速排序结果如下：&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	DispList(L);</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2360,6 +2360,28 @@
       </tags>
   </entry>
   <entry>
+    <title>稀疏矩阵</title>
+    <url>/jaheel.github.io/2020/10/19/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5/</url>
+    <content><![CDATA[<p>教材：严版数据结构</p>
+<p>页码：P99</p>
+<p>IDE：VS2015</p>
+<p>代码如下：</p>
+<a id="more"></a>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MU 5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NU 6</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Status int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ElemType int</span></span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 12500</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> i, j;<span class="comment">//该非零元的行下标和列下标</span></span><br><span class="line">	ElemType e;</span><br><span class="line">&#125;Triple;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	Triple data[MAXSIZE + <span class="number">1</span>];</span><br><span class="line">	<span class="keyword">int</span> mu, nu, tu;<span class="comment">//矩阵的行数、列数、非零元个数</span></span><br><span class="line">&#125;TSMatrix;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateMatrix</span><span class="params">(TSMatrix &amp;M)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> e, i, j, k = <span class="number">1</span>;</span><br><span class="line">	M.mu = MU;</span><br><span class="line">	M.nu = NU;</span><br><span class="line">	srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));</span><br><span class="line">	M.tu = rand() % <span class="number">15</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;M.mu;i++)</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt; M.nu; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			e = rand() % <span class="number">30</span>;</span><br><span class="line">			<span class="keyword">if</span> (e != <span class="number">0</span>) &#123;</span><br><span class="line">				M.data[k].i = i;</span><br><span class="line">				M.data[k].j = j;</span><br><span class="line">				M.data[k].e = e;</span><br><span class="line">				k++;</span><br><span class="line">				<span class="keyword">if</span> (k == M.tu)</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(TSMatrix M)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> k;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;mu=%-2d, nu=%-2d, tu=%-2d&quot;</span>, M.mu, M.nu, M.tu);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">1</span>; k &lt;= M.tu; k++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;i=%-2d, j=%-2d, e=%-2d&quot;</span>, M.data[k].i, M.data[k].j, M.data[k].e);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">TransposeSMatrix</span><span class="params">(TSMatrix M, TSMatrix &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	T.mu = M.nu;</span><br><span class="line">	T.nu = M.mu;</span><br><span class="line">	T.tu = M.tu;</span><br><span class="line">	<span class="keyword">if</span> (T.tu)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> q = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> col=<span class="number">1</span>;col&lt;=M.mu;++col)</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">1</span>; p &lt;= M.tu; ++p)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (M.data[p].j == col)</span><br><span class="line">				&#123;</span><br><span class="line">					T.data[q].i = M.data[p].j;</span><br><span class="line">					T.data[q].j = M.data[p].i;</span><br><span class="line">					T.data[q].e = M.data[p].e;</span><br><span class="line">					++q;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">FastTransposeSMatrix</span><span class="params">(TSMatrix M, TSMatrix &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	T.mu = M.nu;</span><br><span class="line">	T.nu = M.mu;</span><br><span class="line">	T.tu = M.tu;</span><br><span class="line">	<span class="keyword">int</span> col, t, q, p;</span><br><span class="line">	<span class="keyword">int</span> num[NU];</span><br><span class="line">	<span class="keyword">int</span> cpot[NU];</span><br><span class="line">	<span class="keyword">if</span> (T.tu)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (col = <span class="number">1</span>; col &lt;= M.nu; ++col)</span><br><span class="line">			num[col] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (t = <span class="number">1</span>; t &lt;= M.tu; ++t)</span><br><span class="line">			++num[M.data[t].j];</span><br><span class="line">		cpot[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"> </span><br><span class="line">		<span class="keyword">for</span> (col = <span class="number">2</span>; col &lt;= M.nu; ++col)</span><br><span class="line">			cpot[col] = cpot[col - <span class="number">1</span>] + num[col - <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">for</span> (p = <span class="number">1</span>; p &lt;= M.tu; ++p)</span><br><span class="line">		&#123;</span><br><span class="line">			col = M.data[p].j;</span><br><span class="line">			q = cpot[col];</span><br><span class="line">			T.data[q].i = M.data[p].j;</span><br><span class="line">			T.data[q].j = M.data[p].i;</span><br><span class="line">			T.data[q].e = M.data[p].e;</span><br><span class="line">			++cpot[col];</span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">	&#125;<span class="comment">//if</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	TSMatrix M, T,R;</span><br><span class="line">	CreateMatrix(M);</span><br><span class="line">	TransposeSMatrix(M, T);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出稀疏矩阵M：\n&quot;</span>);</span><br><span class="line">	print(M);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出转置矩阵T：\n&quot;</span>);</span><br><span class="line">	print(T);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	FastTransposeSMatrix(M, R);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出快速转置矩阵R：\n&quot;</span>);</span><br><span class="line">	print(R);</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>Algorithm</tag>
+        <tag>data structrue</tag>
+        <tag>Matrix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>特征选择与稀疏学习</title>
     <url>/jaheel.github.io/2020/10/19/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E4%B8%8E%E7%A8%80%E7%96%8F%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>特征(feature)</p>
@@ -2389,28 +2411,6 @@
       <tags>
         <tag>Algorithm</tag>
         <tag>Machine Learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>稀疏矩阵</title>
-    <url>/jaheel.github.io/2020/10/19/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<p>教材：严版数据结构</p>
-<p>页码：P99</p>
-<p>IDE：VS2015</p>
-<p>代码如下：</p>
-<a id="more"></a>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MU 5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NU 6</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Status int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ElemType int</span></span><br><span class="line"> </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 12500</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> i, j;<span class="comment">//该非零元的行下标和列下标</span></span><br><span class="line">	ElemType e;</span><br><span class="line">&#125;Triple;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	Triple data[MAXSIZE + <span class="number">1</span>];</span><br><span class="line">	<span class="keyword">int</span> mu, nu, tu;<span class="comment">//矩阵的行数、列数、非零元个数</span></span><br><span class="line">&#125;TSMatrix;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">CreateMatrix</span><span class="params">(TSMatrix &amp;M)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> e, i, j, k = <span class="number">1</span>;</span><br><span class="line">	M.mu = MU;</span><br><span class="line">	M.nu = NU;</span><br><span class="line">	srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));</span><br><span class="line">	M.tu = rand() % <span class="number">15</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;M.mu;i++)</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt; M.nu; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			e = rand() % <span class="number">30</span>;</span><br><span class="line">			<span class="keyword">if</span> (e != <span class="number">0</span>) &#123;</span><br><span class="line">				M.data[k].i = i;</span><br><span class="line">				M.data[k].j = j;</span><br><span class="line">				M.data[k].e = e;</span><br><span class="line">				k++;</span><br><span class="line">				<span class="keyword">if</span> (k == M.tu)</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(TSMatrix M)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> k;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;mu=%-2d, nu=%-2d, tu=%-2d&quot;</span>, M.mu, M.nu, M.tu);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	<span class="keyword">for</span> (k = <span class="number">1</span>; k &lt;= M.tu; k++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;i=%-2d, j=%-2d, e=%-2d&quot;</span>, M.data[k].i, M.data[k].j, M.data[k].e);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">TransposeSMatrix</span><span class="params">(TSMatrix M, TSMatrix &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	T.mu = M.nu;</span><br><span class="line">	T.nu = M.mu;</span><br><span class="line">	T.tu = M.tu;</span><br><span class="line">	<span class="keyword">if</span> (T.tu)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> q = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> col=<span class="number">1</span>;col&lt;=M.mu;++col)</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> p = <span class="number">1</span>; p &lt;= M.tu; ++p)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (M.data[p].j == col)</span><br><span class="line">				&#123;</span><br><span class="line">					T.data[q].i = M.data[p].j;</span><br><span class="line">					T.data[q].j = M.data[p].i;</span><br><span class="line">					T.data[q].e = M.data[p].e;</span><br><span class="line">					++q;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function">Status <span class="title">FastTransposeSMatrix</span><span class="params">(TSMatrix M, TSMatrix &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	T.mu = M.nu;</span><br><span class="line">	T.nu = M.mu;</span><br><span class="line">	T.tu = M.tu;</span><br><span class="line">	<span class="keyword">int</span> col, t, q, p;</span><br><span class="line">	<span class="keyword">int</span> num[NU];</span><br><span class="line">	<span class="keyword">int</span> cpot[NU];</span><br><span class="line">	<span class="keyword">if</span> (T.tu)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (col = <span class="number">1</span>; col &lt;= M.nu; ++col)</span><br><span class="line">			num[col] = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (t = <span class="number">1</span>; t &lt;= M.tu; ++t)</span><br><span class="line">			++num[M.data[t].j];</span><br><span class="line">		cpot[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"> </span><br><span class="line">		<span class="keyword">for</span> (col = <span class="number">2</span>; col &lt;= M.nu; ++col)</span><br><span class="line">			cpot[col] = cpot[col - <span class="number">1</span>] + num[col - <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">for</span> (p = <span class="number">1</span>; p &lt;= M.tu; ++p)</span><br><span class="line">		&#123;</span><br><span class="line">			col = M.data[p].j;</span><br><span class="line">			q = cpot[col];</span><br><span class="line">			T.data[q].i = M.data[p].j;</span><br><span class="line">			T.data[q].j = M.data[p].i;</span><br><span class="line">			T.data[q].e = M.data[p].e;</span><br><span class="line">			++cpot[col];</span><br><span class="line">		&#125;<span class="comment">//for</span></span><br><span class="line">	&#125;<span class="comment">//if</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	TSMatrix M, T,R;</span><br><span class="line">	CreateMatrix(M);</span><br><span class="line">	TransposeSMatrix(M, T);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出稀疏矩阵M：\n&quot;</span>);</span><br><span class="line">	print(M);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出转置矩阵T：\n&quot;</span>);</span><br><span class="line">	print(T);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	FastTransposeSMatrix(M, R);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输出快速转置矩阵R：\n&quot;</span>);</span><br><span class="line">	print(R);</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>C</tag>
-        <tag>Algorithm</tag>
-        <tag>data structrue</tag>
-        <tag>Matrix</tag>
       </tags>
   </entry>
   <entry>
@@ -2574,35 +2574,6 @@
       </tags>
   </entry>
   <entry>
-    <title>降维与度量学习</title>
-    <url>/jaheel.github.io/2020/10/19/%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>懒惰学习(lazy learning)</p>
-<blockquote>
-<p>在训练阶段把样本保存起来，训练时间开销为零，待收到测试样本后再进行处理</p>
-</blockquote>
-<p>急切学习(eager learning)</p>
-<blockquote>
-<p>再训练阶段对样本进行学习处理的方法</p>
-</blockquote>
-<p>降维(dimension reduction)</p>
-<blockquote>
-<p>通过某种数学变换将原始高维属性空间转变为一个低维“子空间”</p>
-<p>在这个子空间中样本密度大幅提高，距离计算也变得更为容易</p>
-</blockquote>
-<p>多维缩放(Multiple Dimensional Scaling, MDS)</p>
-<p>主成分分析(Principle Component Analysis, PCA)</p>
-<p>核主成分分析(Kernelized PCA, KPCA)</p>
-<p>等度量映射(Isometric Mapping)</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>Algorithm</tag>
-        <tag>Machine Learning</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>集成学习</title>
     <url>/jaheel.github.io/2020/10/19/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>集成学习：构建并结合多个学习器来完成学习任务（多分类器系统）</p>
@@ -2657,6 +2628,35 @@
 </blockquote>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>Algorithm</tag>
+        <tag>Machine Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>降维与度量学习</title>
+    <url>/jaheel.github.io/2020/10/19/%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>懒惰学习(lazy learning)</p>
+<blockquote>
+<p>在训练阶段把样本保存起来，训练时间开销为零，待收到测试样本后再进行处理</p>
+</blockquote>
+<p>急切学习(eager learning)</p>
+<blockquote>
+<p>再训练阶段对样本进行学习处理的方法</p>
+</blockquote>
+<p>降维(dimension reduction)</p>
+<blockquote>
+<p>通过某种数学变换将原始高维属性空间转变为一个低维“子空间”</p>
+<p>在这个子空间中样本密度大幅提高，距离计算也变得更为容易</p>
+</blockquote>
+<p>多维缩放(Multiple Dimensional Scaling, MDS)</p>
+<p>主成分分析(Principle Component Analysis, PCA)</p>
+<p>核主成分分析(Kernelized PCA, KPCA)</p>
+<p>等度量映射(Isometric Mapping)</p>
 ]]></content>
       <categories>
         <category>机器学习</category>
