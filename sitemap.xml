@@ -410,14 +410,14 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/git/</loc>
+    <loc>http://jaheel.github.io/blog/tags/bash/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/bash/</loc>
+    <loc>http://jaheel.github.io/blog/tags/git/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -473,6 +473,13 @@
   </url>
   
   <url>
+    <loc>http://jaheel.github.io/blog/tags/Sort/</loc>
+    <lastmod>2021-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://jaheel.github.io/blog/tags/BFS/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
@@ -481,13 +488,6 @@
   
   <url>
     <loc>http://jaheel.github.io/blog/tags/DFS/</loc>
-    <lastmod>2021-08-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://jaheel.github.io/blog/tags/Sort/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
