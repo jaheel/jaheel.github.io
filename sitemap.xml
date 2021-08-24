@@ -347,13 +347,6 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/Python/</loc>
-    <lastmod>2021-08-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://jaheel.github.io/blog/tags/Rider/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
@@ -362,6 +355,13 @@
   
   <url>
     <loc>http://jaheel.github.io/blog/tags/UML/</loc>
+    <lastmod>2021-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://jaheel.github.io/blog/tags/Python/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -396,14 +396,14 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/VS-Code/</loc>
+    <loc>http://jaheel.github.io/blog/tags/babun/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/babun/</loc>
+    <loc>http://jaheel.github.io/blog/tags/VS-Code/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -459,13 +459,6 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/Graph/</loc>
-    <lastmod>2021-08-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://jaheel.github.io/blog/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
@@ -473,7 +466,7 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/Sort/</loc>
+    <loc>http://jaheel.github.io/blog/tags/Graph/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -488,6 +481,13 @@
   
   <url>
     <loc>http://jaheel.github.io/blog/tags/DFS/</loc>
+    <lastmod>2021-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://jaheel.github.io/blog/tags/Sort/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -515,6 +515,13 @@
   </url>
   
   <url>
+    <loc>http://jaheel.github.io/blog/tags/Stack/</loc>
+    <lastmod>2021-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://jaheel.github.io/blog/tags/Machine-Learning/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
@@ -522,7 +529,7 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/tags/Stack/</loc>
+    <loc>http://jaheel.github.io/blog/tags/Linked-List/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -537,13 +544,6 @@
   
   <url>
     <loc>http://jaheel.github.io/blog/tags/Matrix/</loc>
-    <lastmod>2021-08-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://jaheel.github.io/blog/tags/Linked-List/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -587,14 +587,14 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/categories/Python/</loc>
+    <loc>http://jaheel.github.io/blog/categories/Rider/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/categories/Rider/</loc>
+    <loc>http://jaheel.github.io/blog/categories/Python/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -608,14 +608,14 @@
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/categories/VS-Code/</loc>
+    <loc>http://jaheel.github.io/blog/categories/babun/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://jaheel.github.io/blog/categories/babun/</loc>
+    <loc>http://jaheel.github.io/blog/categories/VS-Code/</loc>
     <lastmod>2021-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
